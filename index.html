@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>7 Spice Buffet Restaurant | Luxury Dining &amp; Gourmet Feast</title>
+    <meta name="description" content="Experience 7 Spice Buffet Restaurant — A high-end luxury dining destination featuring seven flavour zones, live cooking theatrical stations, sizzling tandoor, and gourmet desserts.">
+    <meta name="keywords" content="7 Spice, buffet restaurant, luxury dining, gourmet buffet, live counter, tandoor, Indian delights, Chinese fusion">
+    <meta name="theme-color" content="#080808">
+    <meta property="og:title" content="7 Spice Buffet Restaurant | Luxury Buffet Experience">
+    <meta property="og:description" content="A Feast of Seven Spices, Crafted for Every Taste. Book your luxury dining table today.">
+    <meta property="og:image" content="assets/images/hero-platter.jpg">
+    <meta property="og:type" content="restaurant.restaurant">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+/* ==========================================================================
+   7 SPICE BUFFET RESTAURANT — MASTER STYLESHEET v2.0
+   Deep Forest Green (#122221) + Metallic Gold | Modern Luxury Dining Theme
+   ========================================================================== */
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+    /* ── Primary Background Palette: Deep Forest / Jungle Green ── */
+    --bg-deep:            #0b1a19;
+    --bg-primary:         #122221;
+    --bg-secondary:       #172e2c;
+    --bg-card:            #1a2e2c;
+    --bg-card-hover:      #1f3634;
+    --bg-glass:           rgba(18, 34, 33, 0.72);
+    --bg-glass-card:      rgba(22, 40, 38, 0.65);
+    --bg-glass-elevated:  rgba(28, 48, 46, 0.85);
+    --bg-nav-transparent: rgba(11, 26, 25, 0.0);
+    --bg-nav-scrolled:    rgba(11, 26, 25, 0.92);
+
+    /* ── Metallic Gold Accents ── */
+    --gold-primary:        #D4AF37;
+    --gold-light:          #FFDF73;
+    --gold-dark:           #A07820;
+    --gold-bronze:         #8c6218;
+    --gold-gradient:       linear-gradient(135deg, #FFE68C 0%, #D4AF37 45%, #9E731B 100%);
+    --gold-gradient-soft:  linear-gradient(135deg, rgba(255, 230, 140, 0.12) 0%, rgba(212, 175, 55, 0.04) 100%);
+    --gold-shimmer:        linear-gradient(90deg, transparent, rgba(255, 230, 140, 0.32), transparent);
+
+    /* ── Teal / Green Accents ── */
+    --teal-accent:         #2E8B57;
+    --teal-light:          #3DAA70;
+    --teal-muted:          rgba(46, 139, 87, 0.3);
+
+    /* ── Text Tones ── */
+    --text-pure:           #FFFFFF;
+    --text-warm:           #EFF0EB;
+    --text-muted:          #90A09D;
+    --text-muted-dark:     #5A6E6C;
+
+    /* ── Borders & Glows ── */
+    --border-gold-subtle:  rgba(212, 175, 55, 0.20);
+    --border-gold-glow:    rgba(212, 175, 55, 0.50);
+    --border-green-subtle: rgba(46, 139, 87, 0.20);
+    --border-dark:         rgba(255, 255, 255, 0.07);
+    --glow-gold-sm:        0 0 15px rgba(212, 175, 55, 0.20);
+    --glow-gold-md:        0 0 30px rgba(212, 175, 55, 0.32);
+    --glow-gold-lg:        0 0 60px rgba(212, 175, 55, 0.42);
+    --shadow-card:         0 20px 45px rgba(0, 0, 0, 0.70);
+    --shadow-deep:         0 30px 80px rgba(0, 0, 0, 0.90);
+
+    /* ── Typography — Authentic Restaurant Vibe ── */
+    --font-heading:  'Marcellus', 'Cormorant Garamond', serif;
+    --font-accent:   'Cormorant Garamond', 'Playfair Display', serif;
+    --font-body:     'Plus Jakarta Sans', sans-serif;
+
+    /* ── Transitions ── */
+    --trans-fast:    0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --trans-smooth:  0.4s  cubic-bezier(0.16, 1, 0.3, 1);
+    --trans-bounce:  0.6s  cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   BASE RESET & GLOBAL STYLES
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--bg-deep);
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-warm);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gold-dark), var(--gold-primary));
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: var(--text-pure);
+    line-height: 1.2;
+}
+
+.font-serif   { font-family: var(--font-heading); }
+.font-accent  { font-family: var(--font-accent); }
+
+.text-gold           { color: var(--gold-primary) !important; }
+.text-gold-light     { color: var(--gold-light)   !important; }
+.text-gold-accent    { color: #ECC86A !important; }
+.text-muted-luxury   { color: var(--text-muted)   !important; }
+.text-light-dim      { color: #C8D4D2 !important; }
+
+.text-gold-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.tracking-widest { letter-spacing: 0.28em !important; }
+.tracking-wider  { letter-spacing: 0.16em !important; }
+.italic          { font-style: italic; }
+.text-xs         { font-size: 0.78rem; }
+.text-sm         { font-size: 0.9rem; }
+
+/* ==========================================================================
+   GLASSMORPHISM & CARD COMPONENTS
+   ========================================================================== */
+.glass-gold-card {
+    background:         var(--bg-glass-card);
+    backdrop-filter:    blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border:             1px solid var(--border-gold-subtle);
+    border-radius:      16px;
+    box-shadow:         var(--shadow-card);
+    transition:         all var(--trans-smooth);
+}
+.glass-gold-card:hover {
+    border-color:  var(--border-gold-glow);
+    box-shadow:    var(--shadow-deep), var(--glow-gold-sm);
+    transform:     translateY(-4px);
+}
+
+/* Borders & Dividers */
+.border-gold-subtle    { border: 1px solid var(--border-gold-subtle) !important; }
+.border-gold-glow      { border: 1px solid var(--border-gold-glow)   !important; }
+.border-bottom-gold    { border-bottom: 1px solid var(--border-gold-subtle) !important; }
+.border-bottom-subtle  { border-bottom: 1px solid rgba(255,255,255,0.07); }
+.border-top-dark       { border-top:    1px solid rgba(255,255,255,0.07); }
+
+/* ==========================================================================
+   BADGES & LABELS
+   ========================================================================== */
+.badge-gold-outline {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            8px;
+    padding:        7px 18px;
+    background:     rgba(212, 175, 55, 0.08);
+    border:         1px solid var(--border-gold-subtle);
+    border-radius:  50px;
+    color:          var(--gold-light);
+    font-family:    var(--font-heading);
+    font-weight:    600;
+    letter-spacing: 0.14em;
+    font-size:      0.76rem;
+    text-transform: uppercase;
+}
+.badge-gold-outline.glowing {
+    box-shadow:   0 0 18px rgba(212, 175, 55, 0.22);
+    border-color: var(--gold-primary);
+}
+
+.section-label {
+    font-size:      0.78rem;
+    font-family:    var(--font-heading);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color:          var(--gold-light);
+    display:        block;
+    margin-bottom:  0.75rem;
+}
+
+.section-title {
+    font-size:     clamp(2rem, 3.8vw, 3rem);
+    line-height:   1.18;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    max-width: 680px;
+    margin:    0 auto;
+    color:     var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.gold-divider-center {
+    width:    55px;
+    height:   2px;
+    background: var(--gold-gradient);
+    margin:   1.4rem auto;
+    position: relative;
+}
+.gold-divider-center::after {
+    content:    '✦';
+    position:   absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    color:      var(--gold-primary);
+    font-size:  9px;
+    background: var(--bg-primary);
+    padding:    0 6px;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn-gold {
+    background:      var(--gold-gradient);
+    color:           #0a0a05 !important;
+    font-family:     var(--font-heading);
+    font-weight:     600;
+    letter-spacing:  0.12em;
+    font-size:       0.85rem;
+    padding:         14px 30px;
+    border-radius:   8px;
+    border:          none;
+    text-transform:  uppercase;
+    transition:      all var(--trans-smooth);
+    box-shadow:      0 6px 22px rgba(212, 175, 55, 0.32);
+    position:        relative;
+    overflow:        hidden;
+    text-decoration: none;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+}
+.btn-gold::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.12);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.btn-gold:hover {
+    color:     #000 !important;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.55), var(--glow-gold-md);
+    transform:  translateY(-2px);
+}
+.btn-gold:hover::after { opacity: 1; }
+
+.btn-gold-shimmer {
+    background:      var(--gold-gradient);
+    color:           #0c0a05 !important;
+    font-family:     var(--font-heading);
+    font-weight:     600;
+    letter-spacing:  0.12em;
+    font-size:       0.82rem;
+    padding:         12px 26px;
+    border-radius:   8px;
+    border:          none;
+    text-transform:  uppercase;
+    transition:      all var(--trans-smooth);
+    box-shadow:      0 4px 16px rgba(212, 175, 55, 0.28);
+    position:        relative;
+    overflow:        hidden;
+    text-decoration: none;
+}
+.btn-gold-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: var(--gold-shimmer);
+    transform: skewX(-20deg);
+    transition: 0.6s ease;
+}
+.btn-gold-shimmer:hover::before { left: 200%; }
+.btn-gold-shimmer:hover {
+    color:      #000 !important;
+    box-shadow: 0 8px 28px rgba(212, 175, 55, 0.48);
+    transform:  translateY(-2px);
+}
+
+.btn-outline-gold {
+    background:      transparent;
+    color:           var(--gold-light) !important;
+    border:          1px solid var(--gold-primary);
+    font-family:     var(--font-heading);
+    font-weight:     600;
+    letter-spacing:  0.12em;
+    font-size:       0.85rem;
+    padding:         13px 28px;
+    border-radius:   8px;
+    text-transform:  uppercase;
+    transition:      all var(--trans-smooth);
+    text-decoration: none;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+}
+.btn-outline-gold:hover {
+    background:   rgba(212, 175, 55, 0.10);
+    color:        #FFF !important;
+    border-color: var(--gold-light);
+    box-shadow:   var(--glow-gold-sm);
+    transform:    translateY(-2px);
+}
+
+.btn-whatsapp-hero {
+    background:      rgba(37, 211, 102, 0.1);
+    color:           #25D366 !important;
+    border:          1px solid rgba(37, 211, 102, 0.38);
+    font-family:     var(--font-heading);
+    font-weight:     600;
+    letter-spacing:  0.12em;
+    font-size:       0.85rem;
+    padding:         13px 28px;
+    border-radius:   8px;
+    text-transform:  uppercase;
+    transition:      all var(--trans-smooth);
+    text-decoration: none;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+}
+.btn-whatsapp-hero:hover {
+    background:   rgba(37, 211, 102, 0.22);
+    color:        #FFF !important;
+    border-color: #25D366;
+    box-shadow:   0 0 22px rgba(37, 211, 102, 0.38);
+    transform:    translateY(-2px);
+}
+
+/* ==========================================================================
+   NAVBAR — ULTRA-TRANSPARENT → GLASS ON SCROLL
+   ========================================================================== */
+.site-header {
+    background:    var(--bg-nav-transparent);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding:       18px 0;
+    z-index:       1030;
+    transition:
+        background-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        backdrop-filter  0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color     0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        padding          0.3s  ease;
+}
+
+.site-header.scrolled {
+    background:         rgba(11, 26, 25, 0.92);
+    backdrop-filter:    blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom:      1px solid var(--border-gold-subtle);
+    padding:            10px 0;
+    box-shadow:         0 8px 30px rgba(0, 0, 0, 0.85);
+}
+
+/* Brand Monogram Box */
+.brand-monogram {
+    width:         44px;
+    height:        44px;
+    background:    linear-gradient(135deg, #1f3633 0%, #122221 100%);
+    border:        1px solid var(--gold-primary);
+    border-radius: 10px;
+    display:       flex;
+    align-items:   center;
+    justify-content: center;
+    box-shadow:    var(--glow-gold-sm);
+    transition:    all var(--trans-smooth);
+    flex-shrink:   0;
+}
+.brand-monogram.sm { width: 36px; height: 36px; }
+.brand-monogram:hover {
+    transform:    rotate(5deg) scale(1.06);
+    border-color: var(--gold-light);
+    box-shadow:   var(--glow-gold-md);
+}
+
+.mono-seven {
+    font-family:    var(--font-heading);
+    font-size:      1.55rem;
+    font-weight:    700;
+    background:     var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height:    1;
+}
+
+.brand-name {
+    font-family:    var(--font-heading);
+    font-size:      1.3rem;
+    font-weight:    700;
+    color:          #FFF;
+    line-height:    1.1;
+    letter-spacing: 0.18em;
+}
+.brand-sub {
+    font-size:      0.62rem;
+    color:          var(--gold-light);
+    letter-spacing: 0.28em;
+    font-family:    var(--font-body);
+    font-weight:    600;
+}
+
+/* Nav Links */
+.nav-link-luxury {
+    font-family:    var(--font-heading);
+    font-size:      0.86rem;
+    color:          var(--text-warm) !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding:        8px 14px !important;
+    position:       relative;
+    transition:     color var(--trans-fast);
+}
+.nav-link-luxury::after {
+    content:    '';
+    position:   absolute;
+    bottom:     0;
+    left:       50%;
+    transform:  translateX(-50%);
+    width:      0;
+    height:     2px;
+    background: var(--gold-gradient);
+    transition: width var(--trans-smooth);
+    border-radius: 2px;
+}
+.nav-link-luxury:hover,
+.nav-link-luxury.active { color: var(--gold-light) !important; }
+.nav-link-luxury:hover::after,
+.nav-link-luxury.active::after { width: 70%; }
+
+/* Hamburger */
+.hamburger-box {
+    width:    28px;
+    height:   20px;
+    display:  inline-block;
+    position: relative;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width:        28px;
+    height:       2px;
+    background:   var(--gold-primary);
+    border-radius: 2px;
+    position:     absolute;
+    transition:   transform 0.3s ease;
+}
+.hamburger-inner            { top: 50%; transform: translateY(-50%); }
+.hamburger-inner::before    { content: ''; top: -8px; }
+.hamburger-inner::after     { content: ''; bottom: -8px; }
+
+/* Mobile Drawer */
+.mobile-menu-drawer {
+    position:   fixed;
+    top:        0;
+    right:      -320px;
+    width:      300px;
+    height:     100vh;
+    background: linear-gradient(180deg, #0e2422 0%, #122221 100%);
+    border-left: 1px solid var(--border-gold-subtle);
+    z-index:    1050;
+    transition: right 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -10px 0 45px rgba(0,0,0,0.85);
+    display:    flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.mobile-menu-drawer.open { right: 0; }
+
+.drawer-backdrop {
+    position:   fixed;
+    inset:      0;
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(4px);
+    z-index:    1040;
+    opacity:    0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.drawer-backdrop.open { opacity: 1; visibility: visible; }
+
+.mobile-nav-link {
+    font-family:    var(--font-heading);
+    font-size:      1.05rem;
+    color:          var(--text-warm);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding:        10px 0;
+    display:        block;
+    border-bottom:  1px solid rgba(255,255,255,0.05);
+    transition:     color 0.2s ease, padding-left 0.2s ease;
+}
+.mobile-nav-link:hover {
+    color:        var(--gold-light);
+    padding-left: 10px;
+}
+
+.btn-close-custom {
+    background: none;
+    border:     none;
+    color:      var(--gold-primary);
+    font-size:  1.4rem;
+    cursor:     pointer;
+    transition: transform 0.2s ease;
+}
+.btn-close-custom:hover {
+    transform: rotate(90deg);
+    color: #FFF;
+}
+
+/* ==========================================================================
+   HERO — FULL IMAGE CINEMATIC LAYOUT
+   ========================================================================== */
+.hero-section { min-height: 100vh; }
+
+.hero-full-image-layout {
+    position:        relative;
+    min-height:      100vh;
+    padding-top:     150px;
+    padding-bottom:  100px;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    overflow:        hidden;
+}
+
+/* Background Image */
+.hero-image-backdrop {
+    position:   absolute;
+    inset:      0;
+    background: url('assets/images/hero-full-bg.jpg') center center / cover no-repeat;
+    filter:     brightness(0.42) contrast(1.15) saturate(1.08);
+    transform:  scale(1.04);
+    z-index:    0;
+    transition: transform 9s ease;
+}
+.hero-full-image-layout:hover .hero-image-backdrop { transform: scale(1.07); }
+
+/* Dark green-tinted cinematic gradient */
+.hero-gradient-overlay {
+    position:   absolute;
+    inset:      0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 26, 25, 0.88) 0%,
+        rgba(18, 34, 33, 0.42) 40%,
+        rgba(18, 34, 33, 0.70) 75%,
+        #0b1a19 100%
+    );
+    z-index:    1;
+}
+
+/* Ambient radial vignette with green tint */
+.hero-ambient-vignette {
+    position:   absolute;
+    inset:      0;
+    background: radial-gradient(
+        ellipse at 50% 55%,
+        rgba(212, 175, 55, 0.06) 0%,
+        rgba(18, 34, 33, 0.55) 50%,
+        rgba(11, 26, 25, 0.95) 100%
+    );
+    z-index:    2;
+}
+
+/* Hero Typography */
+.hero-brand-title {
+    font-family:    var(--font-heading);
+    font-size:      clamp(3rem, 8vw, 6.5rem);
+    font-weight:    700;
+    letter-spacing: 0.18em;
+    line-height:    1.0;
+    text-shadow:    0 8px 40px rgba(0,0,0,0.9), 0 0 25px rgba(212,175,55,0.25);
+    display:        inline-block;
+}
+
+.hero-title-sub {
+    font-family:    var(--font-heading);
+    font-size:      clamp(1rem, 2.4vw, 1.7rem);
+    font-weight:    400;
+    letter-spacing: 0.42em;
+    color:          rgba(255,255,255,0.92);
+    margin-top:     0.45rem;
+    text-shadow:    0 4px 20px rgba(0,0,0,0.95);
+}
+
+.hero-subtitle {
+    font-family:    var(--font-accent);
+    font-size:      clamp(1.2rem, 2.4vw, 1.95rem);
+    color:          var(--gold-light);
+    font-style:     italic;
+    font-weight:    500;
+    letter-spacing: 0.02em;
+    text-shadow:    0 3px 18px rgba(0,0,0,0.92);
+}
+
+.hero-description {
+    max-width:   720px;
+    font-size:   clamp(0.95rem, 1.2vw, 1.12rem);
+    color:       rgba(208, 218, 215, 0.90);
+    line-height: 1.82;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.95);
+}
+
+/* Hero Stats Strip (Glassmorph Cards) */
+.hero-highlights-strip { margin-top: 1rem; }
+
+.hero-pill-stat {
+    background:          rgba(18, 34, 33, 0.70);
+    backdrop-filter:     blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border:              1px solid var(--border-gold-subtle);
+    border-radius:       14px;
+    padding:             20px 14px;
+    text-align:          center;
+    transition:          all var(--trans-smooth);
+    box-shadow:          0 8px 28px rgba(0,0,0,0.70);
+}
+.hero-pill-stat:hover {
+    border-color: var(--gold-primary);
+    background:   rgba(26, 46, 44, 0.85);
+    transform:    translateY(-4px);
+    box-shadow:   0 16px 38px rgba(0,0,0,0.88), var(--glow-gold-sm);
+}
+
+.pill-stat-num {
+    display:     block;
+    font-family: var(--font-heading);
+    font-size:   1.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.pill-stat-text {
+    display:        block;
+    font-size:      0.72rem;
+    color:          var(--text-muted);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator { display: inline-block; }
+
+.scroll-arrow-link {
+    display:         inline-flex;
+    flex-direction:  column;
+    align-items:     center;
+    gap:             8px;
+    color:           var(--gold-light);
+    text-decoration: none;
+    font-size:       0.7rem;
+    letter-spacing:  0.24em;
+    font-family:     var(--font-heading);
+    transition:      all 0.3s ease;
+}
+.scroll-arrow-link:hover { color: #FFF; transform: translateY(3px); }
+
+.scroll-arrow-icon {
+    font-size: 0.85rem;
+    animation: arrowBounce 2.4s ease-in-out infinite;
+}
+@keyframes arrowBounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(7px); }
+}
+
+/* ==========================================================================
+   SECTIONS — SHARED
+   ========================================================================== */
+.section-wrapper {
+    position: relative;
+    padding:  100px 0;
+}
+
+.bg-matte-dark  { background-color: var(--bg-primary); }
+.bg-charcoal    { background-color: var(--bg-secondary); }
+.bg-deep        { background-color: var(--bg-deep); }
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+.about-image-card {
+    position:      relative;
+    border-radius: 18px;
+    overflow:      hidden;
+    border:        1px solid var(--border-gold-subtle);
+    box-shadow:    var(--shadow-card);
+}
+.about-image-card img {
+    width:      100%;
+    height:     480px;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+    display:    block;
+}
+.about-image-card:hover img { transform: scale(1.05); }
+
+.about-floating-experience {
+    position:        absolute;
+    bottom:          24px;
+    right:           24px;
+    background:      rgba(11, 26, 25, 0.90);
+    backdrop-filter: blur(16px);
+    border:          1px solid var(--border-gold-glow);
+    padding:         18px 22px;
+    border-radius:   14px;
+    box-shadow:      var(--glow-gold-sm);
+}
+
+.feature-pill-card {
+    background:    var(--bg-card);
+    border:        1px solid var(--border-green-subtle);
+    border-radius: 14px;
+    padding:       24px 20px;
+    transition:    all var(--trans-smooth);
+    height:        100%;
+}
+.feature-pill-card:hover {
+    border-color: var(--gold-primary);
+    transform:    translateY(-4px);
+    box-shadow:   var(--glow-gold-sm);
+    background:   var(--bg-card-hover);
+}
+
+.feature-icon-box {
+    width:            52px;
+    height:           52px;
+    background:       rgba(212, 175, 55, 0.08);
+    border:           1px solid var(--border-gold-subtle);
+    border-radius:    12px;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    color:            var(--gold-primary);
+    font-size:        1.35rem;
+    flex-shrink:      0;
+}
+
+/* ==========================================================================
+   3D SPICE ORBIT SECTION
+   ========================================================================== */
+.spice-orbit-section {
+    position:   relative;
+    min-height: 700px;
+    padding:    110px 0;
+    background: radial-gradient(circle at center, #172e2c 0%, #0b1a19 70%);
+    overflow:   hidden;
+}
+
+.spice-orbit-canvas-container {
+    position: relative;
+    width:    100%;
+    height:   520px;
+    margin:   2rem auto;
+}
+#orbitThreeCanvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.orbit-center-glow-backdrop {
+    position:  absolute;
+    top:  50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width:  320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    filter:  blur(45px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.orbit-spices-legend {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
+    gap:             10px;
+    position:        relative;
+    z-index:         2;
+}
+.spice-pill {
+    padding:         6px 15px;
+    background:      rgba(22, 40, 38, 0.80);
+    backdrop-filter: blur(10px);
+    border:          1px solid var(--border-gold-subtle);
+    border-radius:   30px;
+    font-size:       0.8rem;
+    color:           var(--text-warm);
+    letter-spacing:  0.05em;
+    display:         inline-flex;
+    align-items:     center;
+    gap:             6px;
+    transition:      all 0.3s ease;
+}
+.spice-pill:hover {
+    border-color: var(--gold-light);
+    color:        var(--gold-light);
+    transform:    translateY(-2px);
+    box-shadow:   var(--glow-gold-sm);
+}
+
+/* ==========================================================================
+   INTERACTIVE MENU — 7 SPICE JOURNEY
+   ========================================================================== */
+.menu-category-nav {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
+    gap:             8px;
+    margin-bottom:   3rem;
+}
+
+.category-tab-btn {
+    background:      var(--bg-card);
+    border:          1px solid var(--border-green-subtle);
+    color:           var(--text-muted);
+    font-family:     var(--font-heading);
+    font-size:       0.83rem;
+    letter-spacing:  0.09em;
+    padding:         11px 22px;
+    border-radius:   40px;
+    cursor:          pointer;
+    transition:      all var(--trans-smooth);
+    display:         inline-flex;
+    align-items:     center;
+    gap:             7px;
+    text-transform:  uppercase;
+}
+.category-tab-btn:hover {
+    color:        var(--gold-light);
+    border-color: var(--gold-primary);
+    box-shadow:   var(--glow-gold-sm);
+    transform:    translateY(-2px);
+}
+.category-tab-btn.active {
+    background:   var(--gold-gradient);
+    color:        #0a0a0a !important;
+    border-color: transparent;
+    font-weight:  700;
+    box-shadow:   0 6px 22px rgba(212,175,55,0.38);
+    transform:    translateY(-2px);
+}
+
+/* Dish Panels */
+.menu-items-grid   { position: relative; min-height: 460px; }
+
+.menu-category-panel {
+    display:    none;
+    opacity:    0;
+    transform:  translateY(16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.menu-category-panel.active {
+    display:   block;
+    opacity:   1;
+    transform: translateY(0);
+    animation: fadeInUp 0.45s forwards;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Dish Card */
+.dish-card {
+    background:      var(--bg-card);
+    border:          1px solid var(--border-green-subtle);
+    border-radius:   16px;
+    overflow:        hidden;
+    transition:      all var(--trans-smooth);
+    height:          100%;
+    display:         flex;
+    flex-direction:  column;
+}
+.dish-card:hover {
+    border-color: var(--gold-primary);
+    transform:    translateY(-6px);
+    box-shadow:   0 18px 40px rgba(0,0,0,0.75), var(--glow-gold-sm);
+}
+
+.dish-img-wrapper {
+    position:   relative;
+    height:     220px;
+    overflow:   hidden;
+    background: #162422;
+}
+.dish-img-wrapper img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dish-card:hover .dish-img-wrapper img { transform: scale(1.08); }
+
+.dish-badges-top {
+    position: absolute;
+    top: 12px; left: 12px; right: 12px;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    pointer-events:  none;
+}
+
+.diet-indicator {
+    width:           22px;
+    height:          22px;
+    background:      rgba(0,0,0,0.75);
+    border-radius:   4px;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+    padding:         3px;
+}
+.diet-indicator.veg     { border: 1.5px solid #28a745; }
+.diet-indicator.veg::after    { content:''; width:8px; height:8px; background:#28a745; border-radius:50%; }
+.diet-indicator.non-veg { border: 1.5px solid #dc3545; }
+.diet-indicator.non-veg::after { content:''; width:8px; height:8px; background:#dc3545; border-radius:50%; }
+
+.chef-badge {
+    background:      var(--gold-gradient);
+    color:           #0a0a0a;
+    font-size:       0.66rem;
+    font-family:     var(--font-heading);
+    font-weight:     700;
+    padding:         4px 10px;
+    border-radius:   20px;
+    letter-spacing:  0.05em;
+}
+
+.dish-body {
+    padding:        22px;
+    display:        flex;
+    flex-direction: column;
+    flex-grow:      1;
+}
+.dish-title { font-family: var(--font-heading); font-size: 1.18rem; margin-bottom: 6px; }
+.dish-desc  { color: var(--text-muted); font-size: 0.87rem; margin-bottom: 16px; line-height: 1.5; flex-grow: 1; }
+
+.dish-meta-footer {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    border-top:      1px solid rgba(255,255,255,0.06);
+    padding-top:     12px;
+}
+.spice-level-stars { font-size: 0.78rem; color: #FF5252; }
+.dish-signature-tag { font-size: 0.7rem; color: var(--gold-light); font-weight: 600; letter-spacing: 0.06em; }
+
+.dish-card.highlighted-special {
+    border:     1.5px solid var(--gold-primary);
+    box-shadow: 0 0 25px rgba(212,175,55,0.18);
+    background: linear-gradient(180deg, rgba(28, 46, 36, 0.85) 0%, rgba(26, 46, 44, 0.95) 100%);
+}
+
+/* ==========================================================================
+   BUFFET STORYTELLING TIMELINE
+   ========================================================================== */
+.timeline-track-wrapper { position: relative; margin-top: 3rem; }
+
+.timeline-gold-bar {
+    position:  absolute;
+    top:       50%;
+    left:      4%; right: 4%;
+    height:    2px;
+    background: linear-gradient(90deg, rgba(212,175,55,0.08), var(--gold-primary), rgba(212,175,55,0.08));
+    transform: translateY(-50%);
+    z-index:   0;
+}
+
+.timeline-step-card {
+    background:    var(--bg-card);
+    border:        1px solid var(--border-green-subtle);
+    border-radius: 16px;
+    padding:       36px 22px;
+    text-align:    center;
+    position:      relative;
+    z-index:       1;
+    transition:    all var(--trans-smooth);
+    height:        100%;
+}
+.timeline-step-card:hover {
+    border-color: var(--gold-primary);
+    transform:    translateY(-8px);
+    box-shadow:   0 18px 42px rgba(0,0,0,0.85), var(--glow-gold-sm);
+    background:   var(--bg-card-hover);
+}
+
+.timeline-step-num {
+    font-family:   var(--font-heading);
+    font-size:     2.1rem;
+    font-weight:   700;
+    background:    var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height:   1;
+    margin-bottom: 12px;
+}
+.timeline-step-title { font-size: 1.1rem; letter-spacing: 0.15em; margin-bottom: 10px; }
+.timeline-step-desc  { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; }
+
+/* ==========================================================================
+   OFFER BANNER
+   ========================================================================== */
+.luxury-offer-banner {
+    background:    linear-gradient(135deg, rgba(18,34,33,0.96) 0%, rgba(26,42,34,0.94) 100%),
+                   url('assets/images/offer-banner.jpg') center/cover no-repeat;
+    border:        1px solid var(--border-gold-glow);
+    border-radius: 20px;
+    padding:       65px 40px;
+    position:      relative;
+    overflow:      hidden;
+    box-shadow:    var(--shadow-deep), var(--glow-gold-sm);
+}
+.offer-glow-accent {
+    position:  absolute;
+    top: -50px; right: -50px;
+    width:  260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(212,175,55,0.28) 0%, transparent 70%);
+    filter:  blur(55px);
+}
+
+/* ==========================================================================
+   GALLERY & LIGHTBOX
+   ========================================================================== */
+.gallery-filters {
+    display:         flex;
+    justify-content: center;
+    flex-wrap:       wrap;
+    gap:             8px;
+    margin-bottom:   2.5rem;
+}
+.gallery-filter-btn {
+    background:      transparent;
+    border:          1px solid rgba(255,255,255,0.10);
+    color:           var(--text-muted);
+    font-family:     var(--font-heading);
+    font-size:       0.78rem;
+    letter-spacing:  0.08em;
+    padding:         8px 20px;
+    border-radius:   30px;
+    cursor:          pointer;
+    transition:      all var(--trans-fast);
+}
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+    border-color: var(--gold-primary);
+    color:        var(--gold-light);
+    background:   rgba(212,175,55,0.08);
+}
+
+.gallery-item {
+    position:      relative;
+    border-radius: 14px;
+    overflow:      hidden;
+    height:        280px;
+    cursor:        pointer;
+    border:        1px solid var(--border-green-subtle);
+    background:    var(--bg-card);
+    transition:    all var(--trans-smooth);
+}
+.gallery-item:hover {
+    border-color: var(--gold-primary);
+    transform:    translateY(-4px);
+    box-shadow:   0 14px 36px rgba(0,0,0,0.80), var(--glow-gold-sm);
+}
+.gallery-item img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-item:hover img { transform: scale(1.08); }
+
+.gallery-overlay {
+    position:         absolute;
+    inset:            0;
+    background:       linear-gradient(180deg, transparent 38%, rgba(11,26,25,0.97) 100%);
+    opacity:          0;
+    display:          flex;
+    flex-direction:   column;
+    justify-content:  flex-end;
+    padding:          20px;
+    transition:       opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+.gallery-overlay-icon {
+    position:        absolute;
+    top: 14px; right: 14px;
+    width:           36px;
+    height:          36px;
+    border-radius:   50%;
+    background:      rgba(0,0,0,0.72);
+    border:          1px solid var(--gold-primary);
+    color:           var(--gold-light);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    font-size:       0.82rem;
+}
+
+/* Lightbox Modal */
+.gallery-lightbox-modal {
+    position:   fixed;
+    inset:      0;
+    z-index:    1090;
+    display:    flex;
+    align-items: center;
+    justify-content: center;
+    opacity:    0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.gallery-lightbox-modal.open { opacity: 1; pointer-events: auto; }
+
+.lightbox-overlay {
+    position:   absolute;
+    inset:      0;
+    background: rgba(0,0,0,0.94);
+    backdrop-filter: blur(14px);
+}
+
+.lightbox-container {
+    position:   relative;
+    z-index:    2;
+    max-width:  900px;
+    width:      90%;
+    text-align: center;
+}
+.lightbox-image {
+    max-height:    70vh;
+    max-width:     100%;
+    border-radius: 12px;
+    border:        1px solid var(--border-gold-glow);
+    box-shadow:    0 0 55px rgba(0,0,0,0.95);
+}
+.lightbox-caption { margin-top: 15px; }
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position:        absolute;
+    background:      rgba(18,34,33,0.82);
+    border:          1px solid var(--border-gold-subtle);
+    color:           var(--gold-light);
+    width:           46px;
+    height:          46px;
+    border-radius:   50%;
+    cursor:          pointer;
+    font-size:       1.05rem;
+    transition:      all 0.25s ease;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+}
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover  { background: var(--gold-primary); color: #000; }
+
+.lightbox-close { top: -55px; right: 0; }
+.lightbox-prev  { top: 50%; left: -60px; transform: translateY(-50%); }
+.lightbox-next  { top: 50%; right: -60px; transform: translateY(-50%); }
+
+/* ==========================================================================
+   TESTIMONIALS
+   ========================================================================== */
+.testimonial-card {
+    background:      var(--bg-card);
+    border:          1px solid var(--border-green-subtle);
+    border-radius:   16px;
+    padding:         34px 28px;
+    height:          100%;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: space-between;
+    transition:      all var(--trans-smooth);
+}
+.testimonial-card:hover {
+    border-color: var(--gold-primary);
+    transform:    translateY(-5px);
+    box-shadow:   0 18px 40px rgba(0,0,0,0.80), var(--glow-gold-sm);
+    background:   var(--bg-card-hover);
+}
+
+.testimonial-quote-icon { font-size: 2rem; color: rgba(212,175,55,0.28); margin-bottom: 10px; }
+.testimonial-text { font-size: 1rem; color: #DEE0D8; font-style: italic; line-height: 1.65; margin-bottom: 18px; }
+
+.testimonial-author-box {
+    display:     flex;
+    align-items: center;
+    gap:         14px;
+    border-top:  1px solid rgba(255,255,255,0.07);
+    padding-top: 15px;
+}
+
+.author-avatar {
+    width:            44px;
+    height:           44px;
+    border-radius:    50%;
+    background:       linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    font-weight:      700;
+    color:            #0a0a0a;
+    font-family:      var(--font-heading);
+    flex-shrink:      0;
+}
+.stars-gold { color: var(--gold-light); letter-spacing: 2px; }
+
+/* ==========================================================================
+   CONTACT & RESERVATION
+   ========================================================================== */
+.contact-info-card {
+    background:    var(--bg-card);
+    border:        1px solid var(--border-green-subtle);
+    border-radius: 16px;
+    padding:       36px;
+    height:        100%;
+}
+
+.contact-action-btn-group {
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:                   12px;
+}
+
+.contact-quick-btn {
+    background:      rgba(255,255,255,0.03);
+    border:          1px solid var(--border-green-subtle);
+    color:           var(--text-warm);
+    border-radius:   10px;
+    padding:         12px 6px;
+    text-align:      center;
+    text-decoration: none;
+    font-size:       0.76rem;
+    font-family:     var(--font-heading);
+    letter-spacing:  0.05em;
+    transition:      all 0.25s ease;
+    display:         flex;
+    flex-direction:  column;
+    align-items:     center;
+    gap:             6px;
+}
+.contact-quick-btn i { font-size: 1.15rem; color: var(--gold-primary); }
+.contact-quick-btn:hover {
+    background:   rgba(212,175,55,0.12);
+    border-color: var(--gold-light);
+    color:        #FFF;
+    transform:    translateY(-2px);
+}
+
+/* Reservation Form */
+.reservation-form-box {
+    background:    var(--bg-card);
+    border:        1px solid var(--border-green-subtle);
+    border-radius: 18px;
+    padding:       40px;
+    box-shadow:    var(--shadow-card);
+}
+
+.form-label-luxury {
+    font-family:    var(--font-heading);
+    font-size:      0.76rem;
+    letter-spacing: 0.1em;
+    color:          var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom:  6px;
+}
+
+.form-control-luxury,
+.form-select-luxury {
+    background-color: #0f2220 !important;
+    border:           1px solid rgba(255,255,255,0.10) !important;
+    color:            #FFF !important;
+    border-radius:    8px !important;
+    padding:          12px 16px !important;
+    font-size:        0.95rem;
+    transition:       all 0.3s ease;
+}
+.form-control-luxury:focus,
+.form-select-luxury:focus {
+    border-color: var(--gold-primary) !important;
+    box-shadow:   0 0 14px rgba(212,175,55,0.22) !important;
+    outline:      none;
+    background:   #112523 !important;
+}
+.form-control-luxury::placeholder { color: #445e5a; }
+.form-select-luxury option { background: #122221; color: #FFF; }
+
+/* ==========================================================================
+   RESERVATION CONFIRMATION MODAL
+   ========================================================================== */
+.luxury-modal {
+    position:   fixed;
+    inset:      0;
+    z-index:    1100;
+    display:    flex;
+    align-items: center;
+    justify-content: center;
+    opacity:    0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.luxury-modal.open { opacity: 1; pointer-events: auto; }
+
+.luxury-modal-overlay {
+    position:   absolute;
+    inset:      0;
+    background: rgba(0,0,0,0.88);
+    backdrop-filter: blur(12px);
+}
+
+.luxury-modal-dialog {
+    position:   relative;
+    z-index:    2;
+    max-width:  540px;
+    width:      90%;
+    animation:  modalScaleUp 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScaleUp {
+    from { transform: scale(0.90); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.modal-icon-circle {
+    width:           70px;
+    height:          70px;
+    border-radius:   50%;
+    background:      rgba(212,175,55,0.10);
+    border:          2px solid var(--gold-primary);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    box-shadow:      var(--glow-gold-md);
+}
+
+.modal-close-btn {
+    position:   absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border:     none;
+    color:      var(--text-muted);
+    font-size:  1.2rem;
+    cursor:     pointer;
+    transition: color 0.2s ease;
+}
+.modal-close-btn:hover { color: #FFF; }
+
+.reservation-summary-card {
+    background: #0e2220;
+    border:     1px solid rgba(212,175,55,0.18);
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   FLOATING WHATSAPP WIDGET
+   ========================================================================== */
+.floating-whatsapp-widget {
+    position: fixed;
+    bottom:   30px;
+    right:    30px;
+    z-index:  1020;
+    display:  flex;
+    align-items: center;
+}
+
+.whatsapp-float-btn {
+    width:           60px;
+    height:          60px;
+    border-radius:   50%;
+    background:      linear-gradient(135deg, #25D366, #128C7E);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    color:           #FFF;
+    text-decoration: none;
+    box-shadow:      0 10px 28px rgba(37,211,102,0.38);
+    position:        relative;
+    transition:      transform var(--trans-bounce);
+}
+.whatsapp-float-btn:hover { transform: scale(1.1); color: #FFF; }
+
+.whatsapp-icon { font-size: 2rem; z-index: 2; }
+
+.whatsapp-glow-ring,
+.whatsapp-glow-ring-2 {
+    position:      absolute;
+    inset:         -6px;
+    border-radius: 50%;
+    border:        2px solid #25D366;
+    opacity:       0;
+    animation:     ringPulse 2.5s infinite;
+    pointer-events: none;
+}
+.whatsapp-glow-ring-2 { animation-delay: 1.25s; }
+
+@keyframes ringPulse {
+    0%   { transform: scale(0.9); opacity: 0.8; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+.whatsapp-tooltip {
+    position:    absolute;
+    right:       75px;
+    background:  #122221;
+    border:      1px solid var(--border-gold-glow);
+    border-radius: 12px;
+    padding:     12px 16px;
+    width:       240px;
+    box-shadow:  var(--shadow-deep);
+    opacity:     0;
+    visibility:  hidden;
+    transform:   translateX(10px);
+    transition:  all 0.3s ease;
+    pointer-events: none;
+}
+.floating-whatsapp-widget:hover .whatsapp-tooltip {
+    opacity:   1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.whatsapp-tooltip-header {
+    display:     flex;
+    align-items: center;
+    gap:         8px;
+    margin-bottom: 4px;
+}
+.tooltip-status-dot {
+    width:        8px;
+    height:       8px;
+    background:   #25D366;
+    border-radius: 50%;
+    box-shadow:   0 0 7px #25D366;
+}
+.tooltip-title  { font-family: var(--font-heading); font-size: 0.78rem; color: var(--gold-light); font-weight: 700; }
+.tooltip-msg    { font-size: 0.76rem; color: var(--text-warm); line-height: 1.38; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+    background-color: #091817;
+    border-top:       1px solid rgba(255,255,255,0.05);
+    position:         relative;
+}
+
+.footer-gold-glow-line {
+    position:   absolute;
+    top:        0; left: 0;
+    width:      100%;
+    height:     1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold-primary) 50%, transparent 100%);
+    box-shadow: var(--glow-gold-md);
+}
+
+.footer-brand-title    { font-size: 1.55rem; font-weight: 700; letter-spacing: 0.15em; color: #FFF; }
+.footer-brand-subtitle { font-size: 0.68rem; color: var(--gold-light); letter-spacing: 0.25em; }
+
+.footer-col-title {
+    font-size:     0.95rem;
+    color:         #FFF;
+    letter-spacing: 0.12em;
+    position:      relative;
+    padding-bottom: 10px;
+}
+.footer-col-title::after {
+    content:    '';
+    position:   absolute;
+    bottom:     0; left: 0;
+    width:      28px;
+    height:     2px;
+    background: var(--gold-gradient);
+}
+
+.footer-nav-link {
+    color:           var(--text-muted);
+    text-decoration: none;
+    font-size:       0.88rem;
+    transition:      color 0.2s ease, transform 0.2s ease;
+    display:         inline-block;
+}
+.footer-nav-link:hover { color: var(--gold-light); transform: translateX(4px); }
+
+.social-btn {
+    width:           40px;
+    height:          40px;
+    border-radius:   50%;
+    background:      rgba(255,255,255,0.04);
+    border:          1px solid var(--border-green-subtle);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    color:           var(--gold-light);
+    text-decoration: none;
+    transition:      all 0.3s ease;
+}
+.social-btn:hover {
+    background: var(--gold-gradient);
+    color:      #000;
+    transform:  translateY(-3px);
+    box-shadow: var(--glow-gold-sm);
+    border-color: transparent;
+}
+
+.hover-gold:hover { color: var(--gold-light) !important; }
+
+/* ==========================================================================
+   SCROLL FADE-UP ANIMATIONS
+   ========================================================================== */
+.fade-up-element {
+    opacity:    0;
+    transform:  translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-up-element.in-view { opacity: 1; transform: translateY(0); }
+
+/* Stagger delays for child elements */
+.fade-up-element:nth-child(2) { transition-delay: 0.1s; }
+.fade-up-element:nth-child(3) { transition-delay: 0.2s; }
+.fade-up-element:nth-child(4) { transition-delay: 0.3s; }
+
+/* ==========================================================================
+   BUFFET HOURS (FOOTER CARD)
+   ========================================================================== */
+.buffet-hours-card { padding: 0; }
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet & below */
+@media (max-width: 991.98px) {
+    .hero-full-image-layout { padding-top: 120px; padding-bottom: 80px; }
+    .hero-brand-title       { font-size: clamp(2.8rem, 10vw, 4.5rem); }
+    .hero-title-sub         { font-size: 0.95rem; letter-spacing: 0.28em; }
+    .hero-subtitle          { font-size: 1.3rem; }
+
+    .section-wrapper        { padding: 78px 0; }
+    .timeline-gold-bar      { display: none; }
+    .about-image-card img   { height: 340px; }
+    .contact-action-btn-group { grid-template-columns: 1fr 1fr; }
+
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+
+    .reservation-form-box   { padding: 28px 22px; }
+}
+
+/* Mobile & below */
+@media (max-width: 575.98px) {
+    .hero-full-image-layout { padding-top: 110px; padding-bottom: 70px; }
+    .hero-brand-title       { font-size: clamp(2.4rem, 12vw, 3.6rem); letter-spacing: 0.12em; }
+    .hero-title-sub         { font-size: 0.78rem; letter-spacing: 0.22em; }
+    .hero-subtitle          { font-size: 1.1rem; }
+    .hero-description       { font-size: 0.9rem; }
+
+    .section-wrapper        { padding: 62px 0; }
+    .section-title          { font-size: 1.7rem; }
+
+    .hero-highlights-strip .hero-pill-stat { padding: 14px 8px; }
+    .pill-stat-num          { font-size: 1.5rem; }
+
+    .menu-category-nav      { gap: 6px; }
+    .category-tab-btn       { padding: 8px 14px; font-size: 0.74rem; }
+
+    .contact-action-btn-group { grid-template-columns: 1fr; }
+    .reservation-form-box   { padding: 22px 16px; }
+
+    .floating-whatsapp-widget { bottom: 20px; right: 20px; }
+    .whatsapp-tooltip       { display: none; }
+
+    .gallery-item           { height: 220px; }
+    .about-image-card img   { height: 260px; }
+
+    .lightbox-prev          { left: 8px; }
+    .lightbox-next          { right: 8px; }
+    .lightbox-close         { top: -48px; }
+
+    .luxury-offer-banner    { padding: 40px 20px; }
+    .about-floating-experience { display: none; }
+}
+
+/* Extra-small (under 375px) */
+@media (max-width: 374px) {
+    .hero-brand-title { font-size: 2.2rem; }
+    .badge-gold-outline { font-size: 0.68rem; padding: 5px 12px; }
+    .btn-gold, .btn-outline-gold, .btn-whatsapp-hero { font-size: 0.76rem; padding: 11px 16px; }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .hero-brand-title  { font-size: 7rem; }
+    .hero-title-sub    { font-size: 1.9rem; }
+    .hero-subtitle     { font-size: 2.2rem; }
+    .hero-description  { font-size: 1.18rem; }
+}
+
+/* ==========================================================================
+   PREFERS-REDUCED-MOTION ACCESSIBILITY
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+    </style>
+</head>
+<body class="bg-deep-black text-warm-white">
+
+<header id="main-header" class="site-header fixed-top transition-all duration-300">
+    <div class="container-fluid px-lg-5 px-3">
+        <nav class="navbar navbar-expand-lg py-3">
+            <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="#hero">
+                <div class="brand-monogram"><span class="mono-seven">7</span></div>
+                <div class="brand-text d-flex flex-column">
+                    <span class="brand-name tracking-widest">7 SPICE</span>
+                    <span class="brand-sub">BUFFET RESTAURANT</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0 p-2 shadow-none" type="button" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="desktopNav">
+                <ul class="navbar-nav gap-4 mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-luxury active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#spice-orbit">Orbit</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-luxury" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header-action d-none d-lg-block">
+                <a href="#reservation-section" class="btn btn-gold-shimmer d-inline-flex align-items-center gap-2">
+                    <span>Reserve Table</span>
+                    <i class="fa-solid fa-arrow-right-long small"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div id="mobileMenuDrawer" class="mobile-menu-drawer d-lg-none">
+        <div class="drawer-header d-flex justify-content-between align-items-center px-4 py-4 border-bottom-gold">
+            <div class="d-flex align-items-center gap-2">
+                <div class="brand-monogram sm"><span class="mono-seven">7</span></div>
+                <span class="brand-name tracking-wider text-gold">7 SPICE</span>
+            </div>
+            <button id="closeMobileMenu" class="btn-close-custom" aria-label="Close Navigation Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body px-4 py-5">
+            <ul class="mobile-nav-list list-unstyled d-flex flex-column gap-3">
+                <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#menu" class="mobile-nav-link">Menu Experience</a></li>
+                <li><a href="#spice-orbit" class="mobile-nav-link">The 7 Spice Orbit</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Buffet Experience</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mt-4 pt-4 border-top-dark">
+                <a href="#reservation-section" class="btn btn-gold w-100 py-3 mb-3 text-center d-block"><i class="fa-regular fa-calendar-check me-2"></i> Reserve Your Table</a>
+                <a href="https://wa.me/0123456789?text=Hello%207%20Spice%20Buffet%20Restaurant%2C%20I%20would%20like%20to%20know%20more%20about%20your%20buffet%20and%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold w-100 py-3 text-center d-block"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+    <div id="drawerBackdrop" class="drawer-backdrop d-lg-none"></div>
+</header>
+
+<section id="hero" class="hero-section hero-full-image-layout">
+    <div class="hero-image-backdrop"></div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-ambient-vignette"></div>
+    <div class="container position-relative z-3 text-center">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-10 fade-up-element">
+                <div class="d-inline-flex align-items-center gap-2 mb-4">
+                    <span class="badge-gold-outline glowing"><i class="fa-solid fa-crown text-gold"></i> 7+ FLAVOUR EXPERIENCES</span>
+                </div>
+                <h1 class="hero-title mb-3">
+                    <span class="text-gold-gradient hero-brand-title">7 SPICE</span>
+                    <span class="d-block hero-title-sub">BUFFET RESTAURANT</span>
+                </h1>
+                <p class="hero-subtitle mb-4">"A Feast of Seven Spices, Crafted for Every Taste."</p>
+                <p class="hero-description mx-auto mb-5">Experience an unforgettable buffet featuring rich flavors, fresh ingredients, and dishes crafted to bring every taste together. An opulent culinary voyage celebrating authentic charcoal tandoor, royal dum biryanis, and theatrical live cooking.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+                    <a href="#menu" class="btn btn-gold btn-lg px-4"><i class="fa-solid fa-utensils me-2"></i> Explore Menu</a>
+                    <a href="#reservation-section" class="btn btn-outline-gold btn-lg px-4"><i class="fa-regular fa-calendar-check me-2"></i> Reserve Your Table</a>
+                    <a href="https://wa.me/0123456789?text=Hello%207%20Spice%20Buffet%20Restaurant%2C%20I%20would%20like%20to%20know%20more%20about%20your%20buffet%20and%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero btn-lg px-4"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us</a>
+                </div>
+                <div class="hero-highlights-strip row g-3 justify-content-center pt-3">
+                    <div class="col-6 col-md-3"><div class="hero-pill-stat"><span class="pill-stat-num text-gold">70+</span><span class="pill-stat-text">Daily Curated Dishes</span></div></div>
+                    <div class="col-6 col-md-3"><div class="hero-pill-stat"><span class="pill-stat-num text-gold">7</span><span class="pill-stat-text">Spice Flavour Zones</span></div></div>
+                    <div class="col-6 col-md-3"><div class="hero-pill-stat"><span class="pill-stat-num text-gold">100%</span><span class="pill-stat-text">Live Theatrical Stations</span></div></div>
+                    <div class="col-6 col-md-3"><div class="hero-pill-stat"><span class="pill-stat-num text-gold">4.9&#9733;</span><span class="pill-stat-text">Royal Patrons Rating</span></div></div>
+                </div>
+                <div class="hero-scroll-indicator mt-5">
+                    <a href="#about" class="scroll-arrow-link" aria-label="Scroll down to explore 7 Spice">
+                        <span class="scroll-text">DISCOVER</span>
+                        <i class="fa-solid fa-chevron-down scroll-arrow-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-wrapper bg-matte-dark">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 fade-up-element">
+                <div class="about-image-card">
+                    <img src="assets/images/about-buffet.jpg" alt="7 Spice Buffet Dining Experience" loading="lazy">
+                    <div class="about-floating-experience">
+                        <span class="text-gold font-serif fw-bold d-block fs-5">UNLIMITED INDULGENCE</span>
+                        <span class="text-muted-luxury text-sm">Every spice balanced to absolute perfection</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 fade-up-element">
+                <span class="section-label">THE PHILOSOPHY</span>
+                <h2 class="section-title">MORE THAN A BUFFET.<br><span class="text-gold-gradient">IT'S AN EXPERIENCE.</span></h2>
+                <div class="gold-divider-center ms-0 me-auto mb-4"></div>
+                <p class="text-light-dim fs-5 mb-4 font-accent italic">"At 7 Spice Buffet Restaurant, every dish is created to celebrate flavour, freshness and variety. From sizzling starters to indulgent desserts, our buffet brings together carefully selected dishes designed for every palate."</p>
+                <p class="text-muted-luxury mb-5">We believe dining should be an immersive discovery. We take you on an olfactory and gustatory voyage across India's royal royal royal kitchen heritage, smoky tandoors, fiery Asian woks, and interactive live theatrics.</p>
+                <div class="row g-3">
+                    <div class="col-md-4 col-12"><div class="feature-pill-card h-100"><div class="feature-icon-box mb-3"><i class="fa-solid fa-seedling"></i></div><h5 class="fs-6 text-pure mb-2">Fresh Ingredients</h5><p class="text-muted-luxury text-xs mb-0">Freshly prepared ingredients selected for quality and flavour daily.</p></div></div>
+                    <div class="col-md-4 col-12"><div class="feature-pill-card h-100"><div class="feature-icon-box mb-3"><i class="fa-solid fa-fire-flame-curved"></i></div><h5 class="fs-6 text-pure mb-2">Live Experience</h5><p class="text-muted-luxury text-xs mb-0">Watch selected dishes come alive at our bustling theatrical live counters.</p></div></div>
+                    <div class="col-md-4 col-12"><div class="feature-pill-card h-100"><div class="feature-icon-box mb-3"><i class="fa-solid fa-infinity"></i></div><h5 class="fs-6 text-pure mb-2">Unlimited Variety</h5><p class="text-muted-luxury text-xs mb-0">Explore a wide selection of 70+ dishes under one dining experience.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="menu" class="section-wrapper bg-charcoal">
+    <div class="container">
+        <div class="text-center mb-5 fade-up-element">
+            <span class="section-label">CULINARY MASTERPIECES</span>
+            <h2 class="section-title">THE <span class="text-gold-gradient">7 SPICE</span> EXPERIENCE</h2>
+            <div class="gold-divider-center"></div>
+            <p class="section-description">Immerse your senses in our curated 7 gastronomic zones. From sizzling tandoor skewers to velvety curries and artisanal live cooking.</p>
+        </div>
+        <div class="menu-category-nav fade-up-element" role="tablist">
+            <button class="category-tab-btn active" data-category="starters" role="tab" aria-selected="true"><i class="fa-solid fa-utensils"></i> Starters</button>
+            <button class="category-tab-btn" data-category="indian" role="tab" aria-selected="false"><i class="fa-solid fa-bowl-rice"></i> Indian Delights</button>
+            <button class="category-tab-btn" data-category="chinese" role="tab" aria-selected="false"><i class="fa-solid fa-fire"></i> Chinese Fusion</button>
+            <button class="category-tab-btn" data-category="tandoor" role="tab" aria-selected="false"><i class="fa-solid fa-fire-burner"></i> Tandoor</button>
+            <button class="category-tab-btn" data-category="main" role="tab" aria-selected="false"><i class="fa-solid fa-plate-wheat"></i> Main Course</button>
+            <button class="category-tab-btn" data-category="live" role="tab" aria-selected="false"><i class="fa-solid fa-bell-concierge"></i> Live Counter</button>
+            <button class="category-tab-btn" data-category="desserts" role="tab" aria-selected="false"><i class="fa-solid fa-cake-candles"></i> Desserts</button>
+        </div>
+        <div class="menu-items-grid">
+            <div class="menu-category-panel active" id="panel-starters">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/paneer-tikka.jpg" alt="Paneer Tikka" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Paneer Tikka</h4><p class="dish-desc">Cottage cheese cubes marinated in our signature mustard oil and roasted carom seeds, skewered in clay tandoor.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Medium</span><span class="dish-signature-tag">CLAY TANDOOR</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/crispy-corn.jpg" alt="Crispy Corn" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Crispy Corn</h4><p class="dish-desc">Golden sweet corn kernel tosses with spring onions, cracked black pepper, and tangy lemon-zest chaat masala.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild</span><span class="dish-signature-tag">CRUNCH SENSATION</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/spring-roll.jpg" alt="Veg Spring Roll" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Veg Spring Roll</h4><p class="dish-desc">Crisp artisanal pastry rolls stuffed with julienned vegetables and aromatic herbs, served with sweet chilli dip.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild</span><span class="dish-signature-tag">GOLDEN CRUST</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/paneer-tikka.jpg" alt="Hara Bhara Kebab" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Hara Bhara Kebab</h4><p class="dish-desc">Delicate patties of fresh spinach, green peas, and fragrant mint shallow-fried with toasted cashew crowns.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild</span><span class="dish-signature-tag">HERBAL DELIGHT</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-indian">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/indian-curry.jpg" alt="Paneer Butter Masala" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Paneer Butter Masala</h4><p class="dish-desc">Succulent cottage cheese simmered in a velvet-smooth makhani gravy enriched with butter, cream, and crushed kasuri methi.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Balanced</span><span class="dish-signature-tag">ROYAL CURRY</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/dal-makhani.jpg" alt="Dal Makhani" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Dal Makhani</h4><p class="dish-desc">Slow-cooked black lentils and kidney beans simmered overnight over smouldering coals with white butter and pure cream.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild Creamy</span><span class="dish-signature-tag">OVERNIGHT SIMMER</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/indian-curry.jpg" alt="Veg Kolhapuri" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Veg Kolhapuri</h4><p class="dish-desc">Fiery melange of farm vegetables tossed in a roasted coconut and dark red Byadgi chilli spice paste.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798;&#127798; Hot</span><span class="dish-signature-tag">SPICY MAHARASHTRIAN</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/tandoori-platter.jpg" alt="Butter Naan" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Butter Naan</h4><p class="dish-desc">Pillowy artisan bread slapped against tandoor walls, brushed generously with churned butter and nigella seeds.</p><div class="dish-meta-footer"><span class="spice-level-stars">Non-Spicy</span><span class="dish-signature-tag">TANDOOR FRESH</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-chinese">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/chinese-fusion.jpg" alt="Veg Manchurian" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Veg Manchurian</h4><p class="dish-desc">Minced vegetable dumplings tossed in an aromatic dark soya, ginger, garlic, and coriander reduction.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Tangy</span><span class="dish-signature-tag">INDO-CHINESE</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/hakka-noodles.jpg" alt="Hakka Noodles" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Hakka Noodles</h4><p class="dish-desc">Wok-tossed thin noodles infused with wok hei, shredded bell peppers, cabbage, scallions, and toasted sesame oil.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild Heat</span><span class="dish-signature-tag">WOK SMOKED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/biryani.jpg" alt="Fried Rice" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Fried Rice</h4><p class="dish-desc">Fragrant jasmine rice stir-fried in smoking woks with diced vegetables, light soya, and cracked white pepper.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild</span><span class="dish-signature-tag">WOK TOSSED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/chinese-fusion.jpg" alt="Chilli Paneer" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Chilli Paneer</h4><p class="dish-desc">Crisp-edged cottage cheese cubes wok-seared with crunchy bell peppers, sliced red chillies, and savory glaze.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Savory</span><span class="dish-signature-tag">CRUNCHY BITES</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-tandoor">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/tandoori-platter.jpg" alt="Tandoori Paneer" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Tandoori Paneer</h4><p class="dish-desc">Fresh paneer steaks steeped in roasted cumin and Kashmiri chilli paste, smoked over sweet applewood embers.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Smoked</span><span class="dish-signature-tag">WOOD SMOKED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/paneer-tikka.jpg" alt="Tandoori Vegetables" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Tandoori Vegetables</h4><p class="dish-desc">Charcoal-grilled assortment of broccoli florets, baby potatoes, bell peppers, and zucchini dusted with chaat masala.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Mild Char</span><span class="dish-signature-tag">GARDEN FRESH</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/tandoori-platter.jpg" alt="Garlic Naan" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Garlic Naan</h4><p class="dish-desc">Artisan leavened bread studded with minced roasted garlic cloves, fresh cilantro, and generous golden butter glaze.</p><div class="dish-meta-footer"><span class="spice-level-stars">Aromatic</span><span class="dish-signature-tag">ROASTED GARLIC</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/crispy-corn.jpg" alt="Tandoori Mushroom" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Tandoori Mushroom</h4><p class="dish-desc">Juicy button mushrooms stuffed with spiced cheese and spinach, chargrilled on long steel skewers.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Juicy</span><span class="dish-signature-tag">STUFFED SPECIAL</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-main">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/biryani.jpg" alt="Royal Dum Biryani" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Royal Dum Biryani</h4><p class="dish-desc">Aged long-grain Basmati rice layered with seasonal vegetables, caramelized onions, saffron, rose water, and sealed in clay handi.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Royal Saffron</span><span class="dish-signature-tag">DUM PUKHT</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/indian-curry.jpg" alt="Paneer Curry" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Paneer Curry</h4><p class="dish-desc">Silky cottage cheese stewed in a golden onion-cashew velvet gravy with green cardamom and mace aromas.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Balanced</span><span class="dish-signature-tag">RICH GRAVY</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/dal-makhani.jpg" alt="Dal Tadka" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Dal Tadka</h4><p class="dish-desc">Yellow toor lentils tempered with whole cumin, garlic slivers, dried red chillies, and bubbling pure desi ghee.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Aromatic</span><span class="dish-signature-tag">DESI GHEE TEMPERED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/buffet-counter.jpg" alt="Seasonal Vegetables" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Seasonal Vegetables</h4><p class="dish-desc">Harvest fresh exotic vegetables tossed in coarse home-ground coriander and crushed fenugreek seeds.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Herbaceous</span><span class="dish-signature-tag">HARVEST FRESH</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-live">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/live-pasta.jpg" alt="Artisan Pasta" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Artisan Pasta</h4><p class="dish-desc">Made live before your eyes: Penne or Fusilli tossed with arrabbiata, creamy alfredo, or basil pesto with parmesan shaving.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Custom Heat</span><span class="dish-signature-tag">LIVE COUNTER</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/live-pizza.jpg" alt="Wood-Fired Pizza" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Wood-Fired Pizza</h4><p class="dish-desc">Hand-stretched thin crust dough baked at 450 degrees C with San Marzano tomato sauce, fresh mozzarella, and sweet basil.</p><div class="dish-meta-footer"><span class="spice-level-stars">Mild Italian</span><span class="dish-signature-tag">OVEN BAKED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/chaat.jpg" alt="Dilli Street Chaat" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Dilli Street Chaat</h4><p class="dish-desc">Pani puri shots with 7 spiced herbal waters, crispy papdi chaat, and dahi bhalla with tamarind drizzle.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798;&#127798; Tangy Sweet</span><span class="dish-signature-tag">STREET THEATER</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/dosa.jpg" alt="Live Crisp Dosa" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Live Crisp Dosa</h4><p class="dish-desc">Paper-thin fermented crepes griddled live on cast iron with spiced potato masala, coconut chutney, and piping sambar.</p><div class="dish-meta-footer"><span class="spice-level-stars">&#127798; Warm Spiced</span><span class="dish-signature-tag">CAST IRON SIZZLE</span></div></div></div></div>
+                </div>
+            </div>
+            <div class="menu-category-panel" id="panel-desserts">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6"><div class="dish-card highlighted-special"><div class="dish-img-wrapper"><img src="assets/images/gulab-jamun.jpg" alt="Royal Gulab Jamun" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span><span class="chef-badge">CHEF'S SPECIAL</span></div></div><div class="dish-body"><h4 class="dish-title">Royal Gulab Jamun</h4><p class="dish-desc">Warm melt-in-mouth milk solids dumplings soaked in green cardamom, saffron, and silver leaf sugar nectar.</p><div class="dish-meta-footer"><span class="spice-level-stars text-gold">Warm Sweet</span><span class="dish-signature-tag">ROYAL HERITAGE</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/dessert-brownie.jpg" alt="Sizzling Brownie" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Sizzling Brownie</h4><p class="dish-desc">Decadent Belgian dark chocolate fudge brownie served on a sizzling hot plate with vanilla bean gelato.</p><div class="dish-meta-footer"><span class="spice-level-stars text-gold">Rich Dark Cocoa</span><span class="dish-signature-tag">SIZZLING INDULGENCE</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/ice-cream.jpg" alt="Gourmet Gelato" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Gourmet Gelato</h4><p class="dish-desc">Artisanal scoops of Roasted Almond, Saffron Pistachio, Mango Sorbet, and Madagascar Vanilla.</p><div class="dish-meta-footer"><span class="spice-level-stars text-gold">Chilled Delight</span><span class="dish-signature-tag">HAND CRAFTED</span></div></div></div></div>
+                    <div class="col-lg-3 col-md-6"><div class="dish-card"><div class="dish-img-wrapper"><img src="assets/images/buffet-counter.jpg" alt="Fresh Fruit Platter" loading="lazy"><div class="dish-badges-top"><span class="diet-indicator veg" title="Vegetarian"></span></div></div><div class="dish-body"><h4 class="dish-title">Fresh Fruit Platter</h4><p class="dish-desc">Hand-carved selection of exotic dragon fruit, golden kiwi, berries, and ripe melon sprinkled with mint sprigs.</p><div class="dish-meta-footer"><span class="spice-level-stars text-gold">Refreshing Natural</span><span class="dish-signature-tag">FARM HARVEST</span></div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="spice-orbit" class="spice-orbit-section">
+    <div class="container text-center position-relative z-2">
+        <span class="section-label">ASTRONOMY OF FLAVOUR</span>
+        <h2 class="section-title">THE SECRET BEHIND <span class="text-gold-gradient">THE FLAVOUR</span></h2>
+        <div class="gold-divider-center"></div>
+        <p class="section-description fs-5 font-accent italic mb-2">"7 spices. Endless flavours. One unforgettable experience."</p>
+        <p class="text-muted-luxury text-sm mb-4">Our signature dishes revolve around a planetary alchemy of seven authentic spices, balanced to ignite your senses.</p>
+        <div class="spice-orbit-canvas-container">
+            <div class="orbit-center-glow-backdrop"></div>
+            <canvas id="orbitThreeCanvas"></canvas>
+        </div>
+        <div class="orbit-spices-legend mt-4 fade-up-element">
+            <span class="spice-pill"><i class="fa-solid fa-pepper-hot text-danger"></i> Fiery Chilli</span>
+            <span class="spice-pill"><i class="fa-solid fa-leaf text-success"></i> Green Cardamom</span>
+            <span class="spice-pill"><i class="fa-solid fa-tree text-warning"></i> Ceylon Cinnamon</span>
+            <span class="spice-pill"><i class="fa-solid fa-star text-gold"></i> Star Anise</span>
+            <span class="spice-pill"><i class="fa-solid fa-circle-dot text-secondary"></i> Tellicherry Pepper</span>
+            <span class="spice-pill"><i class="fa-solid fa-cookie-bite text-light"></i> Mountain Garlic</span>
+            <span class="spice-pill"><i class="fa-solid fa-seedling text-success"></i> Garden Herbs</span>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section-wrapper bg-matte-dark">
+    <div class="container">
+        <div class="text-center mb-5 fade-up-element">
+            <span class="section-label">THE FOUR-ACT GASTRONOMY</span>
+            <h2 class="section-title">YOUR <span class="text-gold-gradient">BUFFET JOURNEY</span></h2>
+            <div class="gold-divider-center"></div>
+            <p class="section-description">A seamless dining symphony designed to take you from royal welcome to infinite gourmet repeats.</p>
+        </div>
+        <div class="timeline-track-wrapper">
+            <div class="timeline-gold-bar"></div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 fade-up-element"><div class="timeline-step-card"><div class="timeline-step-num">01</div><h4 class="timeline-step-title">ARRIVE</h4><p class="timeline-step-desc">Welcome to 7 Spice. Step into our black and gold luxury sanctuary greeted with fragrant warm towels and signature welcome elixirs.</p></div></div>
+                <div class="col-lg-3 col-md-6 fade-up-element"><div class="timeline-step-card"><div class="timeline-step-num">02</div><h4 class="timeline-step-title">EXPLORE</h4><p class="timeline-step-desc">Discover our seven flavour zones. Wander through sizzling charcoal tandoors, clay pots, and fiery live wok cooking stations.</p></div></div>
+                <div class="col-lg-3 col-md-6 fade-up-element"><div class="timeline-step-card"><div class="timeline-step-num">03</div><h4 class="timeline-step-title">TASTE</h4><p class="timeline-step-desc">Enjoy freshly prepared dishes served straight from grill to plate. Savor delicate textures and aromatic spices crafted with passion.</p></div></div>
+                <div class="col-lg-3 col-md-6 fade-up-element"><div class="timeline-step-card"><div class="timeline-step-num">04</div><h4 class="timeline-step-title">REPEAT</h4><p class="timeline-step-desc">Your favourite flavours, again and again. Indulge in unlimited rounds, from appetizers to artisanal desserts, at your own leisure.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-wrapper py-5 bg-charcoal">
+    <div class="container">
+        <div class="luxury-offer-banner text-center position-relative fade-up-element">
+            <div class="offer-glow-accent"></div>
+            <div class="position-relative z-2">
+                <span class="badge-gold-outline mb-3">GRAND BUFFET BANQUET</span>
+                <h2 class="display-4 font-serif text-gold-gradient fw-bold mb-3">THE 7 SPICE BUFFET</h2>
+                <p class="fs-4 font-accent italic text-light-dim mb-4">"Come hungry. Leave unforgettable."</p>
+                <p class="text-muted-luxury max-w-600 mx-auto mb-5" style="max-width: 600px;">Reserve your dining session in advance to guarantee prime seating near our theatrical live counters and private dining alcoves.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="#reservation-section" class="btn btn-gold btn-lg px-5"><i class="fa-regular fa-calendar-check me-2"></i> Reserve Your Table</a>
+                    <a href="https://wa.me/0123456789?text=Hello%207%20Spice%20Buffet%20Restaurant%2C%20I%20would%20like%20to%20know%20more%20about%20your%20buffet%20and%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-lg px-5"><i class="fa-brands fa-whatsapp me-2"></i> Instant WhatsApp RSVP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section-wrapper bg-matte-dark">
+    <div class="container">
+        <div class="text-center mb-5 fade-up-element">
+            <span class="section-label">VISUAL SPLENDOUR</span>
+            <h2 class="section-title">THE LUXURY <span class="text-gold-gradient">GALLERY</span></h2>
+            <div class="gold-divider-center"></div>
+            <p class="section-description">A visual showcase of our gourmet spreads, sizzling tandoor skewers, artisanal desserts, and warm ambient sanctuary.</p>
+        </div>
+        <div class="gallery-filters fade-up-element">
+            <button class="gallery-filter-btn active" data-filter="all">All Highlights</button>
+            <button class="gallery-filter-btn" data-filter="buffet">Buffet Counters</button>
+            <button class="gallery-filter-btn" data-filter="dishes">Signature Dishes</button>
+            <button class="gallery-filter-btn" data-filter="ambience">Interior Ambience</button>
+            <button class="gallery-filter-btn" data-filter="chef">Chef Preparation</button>
+            <button class="gallery-filter-btn" data-filter="dessert">Desserts</button>
+        </div>
+        <div class="row g-4" id="galleryGrid">
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="buffet"><img src="assets/images/buffet-counter.jpg" alt="Grand Buffet Spread" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Grand Buffet Spread</h6><span class="text-muted-luxury text-xs">Over 70+ dishes presented under warm golden glow</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dishes"><img src="assets/images/tandoori-platter.jpg" alt="Smoky Tandoor Platter" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Smoky Tandoor Platter</h6><span class="text-muted-luxury text-xs">Clay oven roasted cottage cheese and garden vegetables</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="ambience"><img src="assets/images/restaurant-interior.jpg" alt="Luxury Dining Hall" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Luxury Dining Sanctuary</h6><span class="text-muted-luxury text-xs">Intimate Black and Gold architectural ambience</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="chef"><img src="assets/images/chef-prep.jpg" alt="Chef Flavour Crafting" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Culinary Craftsmanship</h6><span class="text-muted-luxury text-xs">Our executive chef precision-tuning the secret spices</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dishes"><img src="assets/images/biryani.jpg" alt="Dum Handi Biryani" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Dum Handi Biryani</h6><span class="text-muted-luxury text-xs">Slow sealed clay pot with saffron scented Basmati</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dessert"><img src="assets/images/dessert-brownie.jpg" alt="Sizzling Brownie and Desserts" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Dessert Boulevard</h6><span class="text-muted-luxury text-xs">Warm Belgian chocolate fudge and handcrafted sweets</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dishes"><img src="assets/images/fresh-spices.jpg" alt="The Seven Signature Spices" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Seven Sacred Spices</h6><span class="text-muted-luxury text-xs">Whole spices ground fresh every morning</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dishes"><img src="assets/images/live-pizza.jpg" alt="Wood Fired Artisanal Pizza" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Wood Fired Oven</h6><span class="text-muted-luxury text-xs">Crisp crust pizzas baked fresh on live order</span></div></div></div>
+            <div class="col-lg-4 col-md-6 gallery-col"><div class="gallery-item" data-category="dessert"><img src="assets/images/gulab-jamun.jpg" alt="Saffron Gulab Jamun" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div><h6 class="text-gold font-serif mb-1">Saffron Gulab Jamun</h6><span class="text-muted-luxury text-xs">Traditional royal recipe dipped in rose-cardamom syrup</span></div></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section-wrapper bg-charcoal">
+    <div class="container">
+        <div class="text-center mb-5 fade-up-element">
+            <span class="section-label">GUEST EXPERIENCES</span>
+            <h2 class="section-title">WORDS FROM <span class="text-gold-gradient">OUR PATRONS</span></h2>
+            <div class="gold-divider-center"></div>
+            <p class="section-description">Hear what food connoisseurs and families love about dining at 7 Spice Buffet Restaurant.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 fade-up-element"><div class="testimonial-card"><div><div class="stars-gold mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div><p class="testimonial-text">"An amazing variety of food and a beautiful dining experience. The black and gold interior sets an incredible mood, and the tandoori dishes were remarkably succulent."</p></div><div class="testimonial-author-box"><div class="author-avatar">AK</div><div><h6 class="text-pure font-serif mb-0">Aarav Kapoor</h6><span class="text-muted-luxury text-xs">Verified Gourmet Diner (Demo Review)</span></div></div></div></div>
+            <div class="col-lg-4 col-md-6 fade-up-element"><div class="testimonial-card"><div><div class="stars-gold mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div><p class="testimonial-text">"Loved the live counters and desserts. Great place for family dining. The live chaat station and wood-fired pizza kept the kids delighted throughout."</p></div><div class="testimonial-author-box"><div class="author-avatar">RM</div><div><h6 class="text-pure font-serif mb-0">Rhea Mehta</h6><span class="text-muted-luxury text-xs">Family Celebration (Demo Review)</span></div></div></div></div>
+            <div class="col-lg-4 col-md-6 fade-up-element"><div class="testimonial-card"><div><div class="stars-gold mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div><p class="testimonial-text">"Excellent ambience, presentation and flavour. The 7 Spice signature curry and Dum Biryani are easily the best in the city. Truly feels like a 5-star experience."</p></div><div class="testimonial-author-box"><div class="author-avatar">VS</div><div><h6 class="text-pure font-serif mb-0">Vikramaditya S.</h6><span class="text-muted-luxury text-xs">Food Critic (Demo Review)</span></div></div></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="reservation-section" class="section-wrapper bg-matte-dark">
+    <div id="contact" class="container">
+        <div class="text-center mb-5 fade-up-element">
+            <span class="section-label">JOIN OUR BANQUET</span>
+            <h2 class="section-title">RESERVE YOUR <span class="text-gold-gradient">TABLE</span></h2>
+            <div class="gold-divider-center"></div>
+            <p class="section-description">Plan your celebration with us. Secure your dining slot or connect directly with our concierge team.</p>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-5 fade-up-element">
+                <div class="contact-info-card">
+                    <span class="badge-gold-outline mb-3">RESTAURANT DETAILS</span>
+                    <h3 class="font-serif text-pure mb-3">7 Spice Buffet Restaurant</h3>
+                    <p class="text-muted-luxury mb-4">Experience the royal feast. For private dining celebrations, banquets, and customized party spreads, feel free to call our maitre d' directly.</p>
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <div class="d-flex align-items-start gap-3"><i class="fa-solid fa-location-dot text-gold mt-1 fs-5"></i><div><span class="d-block text-gold font-serif fw-semibold text-xs">RESTAURANT ADDRESS</span><span class="text-warm text-sm">XYZ Luxury Boulevard, Gourmet Quarter</span></div></div>
+                        <div class="d-flex align-items-start gap-3"><i class="fa-solid fa-phone text-gold mt-1 fs-5"></i><div><span class="d-block text-gold font-serif fw-semibold text-xs">DIRECT RESERVATION LINE</span><a href="tel:0123456789" class="text-warm text-sm text-decoration-none hover-gold">0123456789</a></div></div>
+                        <div class="d-flex align-items-start gap-3"><i class="fa-solid fa-envelope text-gold mt-1 fs-5"></i><div><span class="d-block text-gold font-serif fw-semibold text-xs">EMAIL CONCIERGE</span><a href="mailto:xyz@gmail.com" class="text-warm text-sm text-decoration-none hover-gold">xyz@gmail.com</a></div></div>
+                    </div>
+                    <div class="contact-action-btn-group pt-3 border-top-dark">
+                        <a href="tel:0123456789" class="contact-quick-btn"><i class="fa-solid fa-phone"></i><span>Call Now</span></a>
+                        <a href="https://wa.me/0123456789?text=Hello%207%20Spice%20Buffet%20Restaurant%2C%20I%20would%20like%20to%20know%20more%20about%20your%20buffet%20and%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="contact-quick-btn"><i class="fa-brands fa-whatsapp text-success"></i><span>WhatsApp</span></a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-quick-btn"><i class="fa-solid fa-map-location-dot"></i><span>Get Directions</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 fade-up-element">
+                <div class="reservation-form-box">
+                    <h4 class="font-serif text-gold-gradient mb-1">Instant Table Reservation</h4>
+                    <p class="text-muted-luxury text-sm mb-4">Demo reservation: Receive an instant confirmation card and WhatsApp dispatch.</p>
+                    <form id="reservationForm">
+                        <div class="row g-3">
+                            <div class="col-md-6"><label for="resName" class="form-label-luxury">Full Name *</label><input type="text" id="resName" class="form-control form-control-luxury" placeholder="e.g. Kabir Sharma" required></div>
+                            <div class="col-md-6"><label for="resPhone" class="form-label-luxury">Phone Number *</label><input type="tel" id="resPhone" class="form-control form-control-luxury" placeholder="0123456789" required></div>
+                            <div class="col-md-6"><label for="resEmail" class="form-label-luxury">Email Address *</label><input type="email" id="resEmail" class="form-control form-control-luxury" placeholder="kabir@example.com" required></div>
+                            <div class="col-md-6"><label for="resDate" class="form-label-luxury">Preferred Date *</label><input type="date" id="resDate" class="form-control form-control-luxury" required></div>
+                            <div class="col-md-6"><label for="resTime" class="form-label-luxury">Preferred Slot *</label>
+                                <select id="resTime" class="form-select form-select-luxury" required>
+                                    <option value="" disabled selected>Select Dining Time</option>
+                                    <optgroup label="Lunch Sessions">
+                                        <option value="12:30 PM">12:30 PM (Early Lunch)</option>
+                                        <option value="01:30 PM">01:30 PM (Peak Lunch)</option>
+                                        <option value="02:45 PM">02:45 PM (Afternoon Spread)</option>
+                                    </optgroup>
+                                    <optgroup label="Dinner Grand Feast">
+                                        <option value="07:30 PM">07:30 PM (Sunset Dinner)</option>
+                                        <option value="08:45 PM">08:45 PM (Prime Banquet)</option>
+                                        <option value="10:00 PM">10:00 PM (Late Night Feast)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="col-md-6"><label for="resGuests" class="form-label-luxury">Number of Guests *</label>
+                                <select id="resGuests" class="form-select form-select-luxury" required>
+                                    <option value="" disabled selected>Select Party Size</option>
+                                    <option value="1 - 2 Guests">1 - 2 Guests (Couple / Executive)</option>
+                                    <option value="3 - 4 Guests">3 - 4 Guests (Small Family)</option>
+                                    <option value="5 - 8 Guests">5 - 8 Guests (Family and Friends)</option>
+                                    <option value="9 - 15 Guests">9 - 15 Guests (Banquet Table)</option>
+                                    <option value="16+ Guests">16+ Guests (Private Party / Corporate)</option>
+                                </select>
+                            </div>
+                            <div class="col-12"><label for="resMessage" class="form-label-luxury">Dietary Preferences or Special Requests</label><textarea id="resMessage" class="form-control form-control-luxury" rows="3" placeholder="Let us know if you are celebrating a birthday, anniversary, or have dietary requirements..."></textarea></div>
+                            <div class="col-12 pt-2"><button type="submit" class="btn btn-gold w-100 py-3"><i class="fa-solid fa-paper-plane me-2"></i> Send Reservation Request</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer position-relative pt-5 pb-4">
+    <div class="footer-gold-glow-line"></div>
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand-box mb-4">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="brand-monogram"><span class="mono-seven">7</span></div>
+                        <div><h3 class="footer-brand-title mb-0">7 SPICE</h3><span class="footer-brand-subtitle">BUFFET RESTAURANT</span></div>
+                    </div>
+                    <p class="footer-tagline italic text-gold-light mb-4">"Where every spice tells a story."</p>
+                    <p class="footer-description text-muted-luxury mb-4">An extraordinary culinary theater uniting the seven elemental spices into over 70+ handcrafted dishes, live sizzle stations, and royal hospitality.</p>
+                    <div class="footer-social-icons d-flex gap-3">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Subscribe on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <h4 class="footer-col-title mb-4">Quick Links</h4>
+                <ul class="footer-nav-list list-unstyled d-flex flex-column gap-2">
+                    <li><a href="#hero" class="footer-nav-link">Home</a></li>
+                    <li><a href="#about" class="footer-nav-link">About Experience</a></li>
+                    <li><a href="#menu" class="footer-nav-link">Spice Journey Menu</a></li>
+                    <li><a href="#spice-orbit" class="footer-nav-link">7 Spice Orbit</a></li>
+                    <li><a href="#gallery" class="footer-nav-link">Luxury Gallery</a></li>
+                    <li><a href="#contact" class="footer-nav-link">Contact and Location</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <h4 class="footer-col-title mb-4">Buffet Hours</h4>
+                <div class="buffet-hours-card">
+                    <div class="mb-3"><span class="d-block text-gold-accent font-serif fw-semibold">LUNCH SPREAD</span><span class="text-light-dim text-sm">Mon - Sun: 12:00 PM - 3:45 PM</span></div>
+                    <div class="mb-3"><span class="d-block text-gold-accent font-serif fw-semibold">DINNER GRAND FEAST</span><span class="text-light-dim text-sm">Mon - Sun: 7:00 PM - 11:30 PM</span></div>
+                    <div class="mt-2 text-xs text-muted-luxury">* Live culinary counters remain active until 30 minutes before closing.</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-col-title mb-4">Concierge and Visit</h4>
+                <div class="footer-contact-details d-flex flex-column gap-3">
+                    <div class="d-flex align-items-start gap-3"><i class="fa-solid fa-location-dot text-gold mt-1"></i><span class="text-muted-luxury">XYZ Luxury Boulevard, Gourmet Quarter</span></div>
+                    <div class="d-flex align-items-center gap-3"><i class="fa-solid fa-phone text-gold"></i><a href="tel:0123456789" class="text-muted-luxury text-decoration-none hover-gold">0123456789</a></div>
+                    <div class="d-flex align-items-center gap-3"><i class="fa-solid fa-envelope text-gold"></i><a href="mailto:xyz@gmail.com" class="text-muted-luxury text-decoration-none hover-gold">xyz@gmail.com</a></div>
+                </div>
+                <div class="mt-4"><a href="#reservation-section" class="btn btn-outline-gold btn-sm w-100 py-2"><i class="fa-regular fa-calendar-check me-2"></i> Book Online Table</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-5 pt-4 border-top-dark d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <p class="copyright-text mb-0 text-muted-luxury text-xs text-center text-md-start">&copy; 2026 7 Spice Buffet Restaurant. All Rights Reserved. Designed with luxury craftsmanship.</p>
+            <div class="d-flex gap-4 text-xs text-muted-luxury">
+                <span class="text-gold-light">Hygiene Certified</span>
+                <span>&#8226;</span>
+                <span class="text-gold-light">Valet Parking</span>
+                <span>&#8226;</span>
+                <span class="text-gold-light">Private Dining Available</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="galleryLightbox" class="gallery-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-container">
+        <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNextBtn" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content-box">
+            <img id="lightboxImg" src="" alt="7 Spice Gallery Highlight" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h5 id="lightboxTitle" class="text-gold mb-1 font-serif">Dish Title</h5>
+                <p id="lightboxDesc" class="text-muted-luxury text-sm mb-0">Dish description</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reservationModal" class="luxury-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="luxury-modal-overlay" id="modalOverlay"></div>
+    <div class="luxury-modal-dialog">
+        <div class="luxury-modal-content glass-gold-card p-4 p-md-5 text-center position-relative">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Confirmation"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-icon-circle mx-auto mb-4"><i class="fa-solid fa-check text-gold fa-2x"></i></div>
+            <span class="badge-gold-outline text-xs mb-2 d-inline-block">CONFIRMATION PENDING</span>
+            <h3 class="modal-title font-serif text-gold-gradient mb-3">Reservation Request Received</h3>
+            <p class="text-muted-luxury mb-4" id="modalGuestDetails">Thank you! We have logged your reservation preference. Our maitre d' will reach out via WhatsApp / phone to confirm your table arrangements.</p>
+            <div class="reservation-summary-card p-3 mb-4 rounded-3 text-start">
+                <div class="d-flex justify-content-between py-1 border-bottom-subtle"><span class="text-muted text-xs">RESTAURANT</span><span class="text-gold fw-semibold text-xs">7 Spice Buffet Restaurant</span></div>
+                <div class="d-flex justify-content-between py-1 border-bottom-subtle"><span class="text-muted text-xs">DATE AND TIME</span><span class="text-light text-xs" id="summaryDateTime">-</span></div>
+                <div class="d-flex justify-content-between py-1"><span class="text-muted text-xs">PARTY SIZE</span><span class="text-light text-xs" id="summaryGuests">-</span></div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                <button type="button" class="btn btn-gold py-2 px-4" id="modalDoneBtn">Awesome, Thank You</button>
+                <a id="modalWhatsappDirect" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold py-2 px-4"><i class="fa-brands fa-whatsapp me-2"></i> Open in WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="floating-whatsapp-widget" id="floatingWhatsapp">
+    <a href="https://wa.me/0123456789?text=Hello%207%20Spice%20Buffet%20Restaurant%2C%20I%20would%20like%20to%20know%20more%20about%20your%20buffet%20and%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chat with 7 Spice Restaurant Concierge on WhatsApp" id="whatsappFloatLink">
+        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+        <span class="whatsapp-glow-ring"></span>
+        <span class="whatsapp-glow-ring-2"></span>
+    </a>
+    <div class="whatsapp-tooltip" role="tooltip">
+        <div class="whatsapp-tooltip-header"><span class="tooltip-status-dot"></span><span class="tooltip-title">7 Spice Concierge</span></div>
+        <p class="tooltip-msg mb-0">Reserve a table or ask about today's live buffet spread!</p>
+    </div>
+</div>
+
+<script>
+/**
+ * 7 SPICE BUFFET RESTAURANT - THREE.JS 3D SCENES
+ * 1. Hero 3D Floating Gourmet Composition & Vegetables with Golden Rim Lighting
+ * 2. "The Secret Behind The Flavour" 3D Spice Orbit around Golden "7"
+ */
+
+(function() {
+    'use strict';
+
+    // Verify Three.js is available
+    if (typeof THREE === 'undefined') {
+        console.warn('Three.js library is not loaded. 3D orbit component will be skipped.');
+        return;
+    }
+
+    const isMobile = window.innerWidth < 768;
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? 1.25 : 1.75);
+
+    // Hero 3D canvas removed — full image hero is used instead.
+    // Only the Spice Orbit around golden "7" is initialized below.
+
+    function initHeroScene(canvas) {
+        const container = canvas.parentElement;
+        const width = container.clientWidth || window.innerWidth;
+        const height = container.clientHeight || 540;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+        camera.position.z = 24;
+
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            alpha: true,
+            antialias: !isMobile,
+            powerPreference: 'high-performance'
+        });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(pixelRatio);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.1;
+
+        // Realistic Golden & Warm Ambient Lighting
+        const ambientLight = new THREE.AmbientLight(0xfff5e6, 0.7);
+        scene.add(ambientLight);
+
+        const goldKeyLight = new THREE.PointLight(0xFFDF73, 2.4, 60);
+        goldKeyLight.position.set(15, 12, 18);
+        scene.add(goldKeyLight);
+
+        const warmFillLight = new THREE.PointLight(0xD4AF37, 1.8, 50);
+        warmFillLight.position.set(-14, -8, 12);
+        scene.add(warmFillLight);
+
+        const rimLight = new THREE.DirectionalLight(0xFFEAA7, 1.2);
+        rimLight.position.set(0, 20, -10);
+        scene.add(rimLight);
+
+        // Group for all floating objects
+        const foodGroup = new THREE.Group();
+        scene.add(foodGroup);
+
+        // Helper materials
+        const goldMaterial = new THREE.MeshStandardMaterial({
+            color: 0xD4AF37,
+            metalness: 0.85,
+            roughness: 0.25,
+            emissive: 0x3a2505
+        });
+
+        const redChilliMat = new THREE.MeshStandardMaterial({
+            color: 0xDC2626,
+            roughness: 0.35,
+            metalness: 0.2,
+            clearcoat: 0.8,
+            clearcoatRoughness: 0.2
+        });
+
+        const greenChilliMat = new THREE.MeshStandardMaterial({
+            color: 0x16A34A,
+            roughness: 0.4,
+            metalness: 0.15,
+            clearcoat: 0.6
+        });
+
+        const tomatoMat = new THREE.MeshStandardMaterial({
+            color: 0xEF4444,
+            roughness: 0.2,
+            metalness: 0.1,
+            clearcoat: 0.9
+        });
+
+        const lemonMat = new THREE.MeshStandardMaterial({
+            color: 0xFACC15,
+            roughness: 0.5,
+            metalness: 0.1
+        });
+
+        const bellPepperMat = new THREE.MeshStandardMaterial({
+            color: 0xF97316,
+            roughness: 0.3,
+            metalness: 0.15,
+            clearcoat: 0.7
+        });
+
+        const garlicMat = new THREE.MeshStandardMaterial({
+            color: 0xF5F0E6,
+            roughness: 0.6,
+            metalness: 0.05
+        });
+
+        const cinnamonMat = new THREE.MeshStandardMaterial({
+            color: 0x854D0E,
+            roughness: 0.8,
+            metalness: 0.1
+        });
+
+        const herbMat = new THREE.MeshStandardMaterial({
+            color: 0x15803D,
+            roughness: 0.5,
+            side: THREE.DoubleSide
+        });
+
+        // Procedural Creation of 3D Stylized Food Items
+        const floatingItems = [];
+
+        // 1. Tomato (Glossy sphere with calyx stem)
+        const tomatoGroup = new THREE.Group();
+        const tomatoMesh = new THREE.Mesh(new THREE.SphereGeometry(1.2, 24, 24), tomatoMat);
+        tomatoMesh.scale.set(1, 0.9, 1);
+        tomatoGroup.add(tomatoMesh);
+        const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.1, 0.5, 8), herbMat);
+        stem.position.y = 1.1;
+        tomatoGroup.add(stem);
+        tomatoGroup.position.set(-6.5, 3.5, 2);
+        foodGroup.add(tomatoGroup);
+        floatingItems.push({ obj: tomatoGroup, rotSpeed: [0.008, 0.012, 0.005], floatSpeed: 1.2, offset: 0 });
+
+        // 2. Red Chilli (Curved tapered cylinder)
+        const chilliCurve = new THREE.CatmullRomCurve3([
+            new THREE.Vector3(0, -1.8, 0),
+            new THREE.Vector3(0.3, -0.6, 0.2),
+            new THREE.Vector3(0.5, 0.6, -0.1),
+            new THREE.Vector3(0.2, 1.6, 0)
+        ]);
+        const chilliGeo = new THREE.TubeGeometry(chilliCurve, 20, 0.36, 12, false);
+        const redChilliMesh = new THREE.Mesh(chilliGeo, redChilliMat);
+        redChilliMesh.position.set(7.2, 2.8, 1);
+        foodGroup.add(redChilliMesh);
+        floatingItems.push({ obj: redChilliMesh, rotSpeed: [0.01, 0.015, 0.008], floatSpeed: 1.5, offset: 1.2 });
+
+        // 3. Green Chilli
+        const greenChilliMesh = new THREE.Mesh(chilliGeo, greenChilliMat);
+        greenChilliMesh.position.set(-7, -3.2, 3);
+        greenChilliMesh.rotation.z = Math.PI / 3;
+        foodGroup.add(greenChilliMesh);
+        floatingItems.push({ obj: greenChilliMesh, rotSpeed: [0.007, 0.01, 0.012], floatSpeed: 1.1, offset: 2.5 });
+
+        // 4. Bell Pepper (Lobed Torus / Sphere combo)
+        const pepperGroup = new THREE.Group();
+        for (let i = 0; i < 4; i++) {
+            const lobe = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.35, 1.8, 12), bellPepperMat);
+            const angle = (i * Math.PI) / 2;
+            lobe.position.set(Math.cos(angle) * 0.45, 0, Math.sin(angle) * 0.45);
+            pepperGroup.add(lobe);
+        }
+        pepperGroup.position.set(6.8, -3.5, 2.5);
+        foodGroup.add(pepperGroup);
+        floatingItems.push({ obj: pepperGroup, rotSpeed: [0.009, 0.008, 0.006], floatSpeed: 1.3, offset: 3.8 });
+
+        // 5. Lemon (Citrus spheroid)
+        const lemonMesh = new THREE.Mesh(new THREE.SphereGeometry(1.0, 20, 20), lemonMat);
+        lemonMesh.scale.set(1.4, 0.95, 0.95);
+        lemonMesh.position.set(-4.5, 6, -1);
+        foodGroup.add(lemonMesh);
+        floatingItems.push({ obj: lemonMesh, rotSpeed: [0.012, 0.008, 0.01], floatSpeed: 1.4, offset: 4.2 });
+
+        // 6. Garlic Clove / Bulb
+        const garlicMesh = new THREE.Mesh(new THREE.ConeGeometry(0.9, 1.5, 12), garlicMat);
+        garlicMesh.position.set(5.5, 6.2, 0);
+        foodGroup.add(garlicMesh);
+        floatingItems.push({ obj: garlicMesh, rotSpeed: [0.006, 0.014, 0.005], floatSpeed: 1.6, offset: 5.1 });
+
+        // 7. Cinnamon Stick
+        const cinnamonMesh = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 2.4, 12), cinnamonMat);
+        cinnamonMesh.rotation.x = Math.PI / 4;
+        cinnamonMesh.position.set(-6, -6, 0);
+        foodGroup.add(cinnamonMesh);
+        floatingItems.push({ obj: cinnamonMesh, rotSpeed: [0.01, 0.007, 0.014], floatSpeed: 1.2, offset: 0.8 });
+
+        // 8. Golden Cutlery Accent (Mini Golden Spoon & Fork)
+        const spoonHandle = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.08, 2.8, 8), goldMaterial);
+        const spoonHead = new THREE.Mesh(new THREE.SphereGeometry(0.4, 16, 16), goldMaterial);
+        spoonHead.scale.set(0.8, 1.2, 0.3);
+        spoonHead.position.y = 1.4;
+        const spoonGroup = new THREE.Group();
+        spoonGroup.add(spoonHandle);
+        spoonGroup.add(spoonHead);
+        spoonGroup.position.set(7.5, -0.5, 3);
+        spoonGroup.rotation.z = -Math.PI / 4;
+        foodGroup.add(spoonGroup);
+        floatingItems.push({ obj: spoonGroup, rotSpeed: [0.006, 0.008, 0.012], floatSpeed: 0.9, offset: 2.1 });
+
+        // Swirling Golden Spice Particles
+        const particleCount = isMobile ? 35 : 80;
+        const particlesGeo = new THREE.BufferGeometry();
+        const posArray = new Float32Array(particleCount * 3);
+        for (let i = 0; i < particleCount * 3; i += 3) {
+            posArray[i] = (Math.random() - 0.5) * 32;
+            posArray[i + 1] = (Math.random() - 0.5) * 24;
+            posArray[i + 2] = (Math.random() - 0.5) * 16;
+        }
+        particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMat = new THREE.PointsMaterial({
+            size: isMobile ? 0.18 : 0.28,
+            color: 0xFFDF73,
+            transparent: true,
+            opacity: 0.8,
+            blending: THREE.AdditiveBlending
+        });
+        const spiceParticles = new THREE.Points(particlesGeo, particlesMat);
+        scene.add(spiceParticles);
+
+        // Mouse Parallax Handling
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetX = 0;
+        let targetY = 0;
+
+        window.addEventListener('mousemove', function(e) {
+            const normX = (e.clientX / window.innerWidth) * 2 - 1;
+            const normY = -(e.clientY / window.innerHeight) * 2 + 1;
+            targetX = normX * 2.5;
+            targetY = normY * 2;
+        });
+
+        // Optimization: Pause rendering when hero is out of view
+        let isHeroVisible = true;
+        if ('IntersectionObserver' in window) {
+            const heroObserver = new IntersectionObserver((entries) => {
+                isHeroVisible = entries[0].isIntersecting;
+            }, { threshold: 0.05 });
+            heroObserver.observe(container);
+        }
+
+        // Animation Loop
+        let clock = new THREE.Clock();
+
+        function animateHero() {
+            requestAnimationFrame(animateHero);
+            if (!isHeroVisible) return;
+
+            const elapsedTime = clock.getElapsedTime();
+
+            // Smooth mouse interpolation
+            mouseX += (targetX - mouseX) * 0.04;
+            mouseY += (targetY - mouseY) * 0.04;
+            foodGroup.position.x = mouseX;
+            foodGroup.position.y = mouseY;
+            foodGroup.rotation.y = mouseX * 0.08;
+
+            // Animate each floating object with organic bobbing & rotation
+            floatingItems.forEach(item => {
+                item.obj.rotation.x += item.rotSpeed[0];
+                item.obj.rotation.y += item.rotSpeed[1];
+                item.obj.rotation.z += item.rotSpeed[2];
+                item.obj.position.y += Math.sin(elapsedTime * item.floatSpeed + item.offset) * 0.008;
+            });
+
+            // Golden spice particles slow drift
+            spiceParticles.rotation.y = elapsedTime * 0.04;
+            spiceParticles.rotation.x = Math.sin(elapsedTime * 0.02) * 0.05;
+
+            renderer.render(scene, camera);
+        }
+        animateHero();
+
+        // Resize Listener
+        window.addEventListener('resize', function() {
+            const newW = container.clientWidth;
+            const newH = container.clientHeight || 540;
+            camera.aspect = newW / newH;
+            camera.updateProjectionMatrix();
+            renderer.setSize(newW, newH);
+        });
+    }
+
+    /* ==========================================================================
+       SCENE 2: "THE SECRET BEHIND THE FLAVOUR" 3D SPICE ORBIT
+       ========================================================================== */
+    const orbitCanvas = document.getElementById('orbitThreeCanvas');
+    if (orbitCanvas) {
+        initOrbitScene(orbitCanvas);
+    }
+
+    function initOrbitScene(canvas) {
+        const container = canvas.parentElement;
+        const width = container.clientWidth || 800;
+        const height = container.clientHeight || 520;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
+        camera.position.set(0, 5, 28);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            alpha: true,
+            antialias: !isMobile,
+            powerPreference: 'high-performance'
+        });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(pixelRatio);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.2;
+
+        // Illumination
+        const ambient = new THREE.AmbientLight(0xfff5e6, 0.6);
+        scene.add(ambient);
+
+        const goldSpot = new THREE.PointLight(0xFFDF73, 2.8, 60);
+        goldSpot.position.set(8, 12, 14);
+        scene.add(goldSpot);
+
+        const rimSpot = new THREE.PointLight(0xD4AF37, 2.0, 50);
+        rimSpot.position.set(-10, -6, 12);
+        scene.add(rimSpot);
+
+        // Core Group
+        const orbitMasterGroup = new THREE.Group();
+        scene.add(orbitMasterGroup);
+
+        // --- Sculpted Metallic Golden "7" ---
+        const goldMaterial = new THREE.MeshStandardMaterial({
+            color: 0xD4AF37,
+            metalness: 0.9,
+            roughness: 0.2,
+            emissive: 0x241804
+        });
+
+        const sevenGroup = new THREE.Group();
+
+        // Horizontal top bar of "7"
+        const topBar = new THREE.Mesh(new THREE.BoxGeometry(4.2, 0.85, 0.9), goldMaterial);
+        topBar.position.set(0, 2.4, 0);
+        sevenGroup.add(topBar);
+
+        // Serif accent on top left
+        const serif = new THREE.Mesh(new THREE.BoxGeometry(0.85, 0.95, 0.9), goldMaterial);
+        serif.position.set(-1.67, 1.85, 0);
+        sevenGroup.add(serif);
+
+        // Diagonal stem of "7"
+        const stemHeight = 5.2;
+        const stem = new THREE.Mesh(new THREE.BoxGeometry(0.85, stemHeight, 0.9), goldMaterial);
+        stem.rotation.z = -0.42;
+        stem.position.set(0.5, 0.1, 0);
+        sevenGroup.add(stem);
+
+        // Center golden glow sphere
+        const coreGlowMesh = new THREE.Mesh(
+            new THREE.SphereGeometry(1.6, 16, 16),
+            new THREE.MeshBasicMaterial({
+                color: 0xD4AF37,
+                transparent: true,
+                opacity: 0.15,
+                blending: THREE.AdditiveBlending
+            })
+        );
+        sevenGroup.add(coreGlowMesh);
+
+        orbitMasterGroup.add(sevenGroup);
+
+        // --- 3D Orbital Rings ---
+        const orbitRadiusX = 10.5;
+        const orbitRadiusZ = 7.0;
+
+        // Visible Golden Orbit Track
+        const curvePoints = [];
+        for (let i = 0; i <= 64; i++) {
+            const theta = (i / 64) * Math.PI * 2;
+            curvePoints.push(new THREE.Vector3(Math.cos(theta) * orbitRadiusX, 0, Math.sin(theta) * orbitRadiusZ));
+        }
+        const orbitCurve = new THREE.CatmullRomCurve3(curvePoints);
+        const orbitTrackGeo = new THREE.TubeGeometry(orbitCurve, 64, 0.05, 8, true);
+        const orbitTrackMat = new THREE.MeshBasicMaterial({
+            color: 0xD4AF37,
+            transparent: true,
+            opacity: 0.4
+        });
+        const orbitTrack = new THREE.Mesh(orbitTrackGeo, orbitTrackMat);
+        orbitTrack.rotation.x = 0.35; // Tilted orbit plane
+        orbitMasterGroup.add(orbitTrack);
+
+        // Second subtle counter-tilted ring
+        const orbitTrack2 = new THREE.Mesh(orbitTrackGeo, new THREE.MeshBasicMaterial({
+            color: 0xFFDF73,
+            transparent: true,
+            opacity: 0.2
+        }));
+        orbitTrack2.rotation.x = -0.25;
+        orbitTrack2.rotation.z = 0.2;
+        orbitTrack2.scale.set(0.85, 0.85, 0.85);
+        orbitMasterGroup.add(orbitTrack2);
+
+        // --- 7 Orbiting Signature Spices ---
+        const spicesData = [
+            { name: "Chilli", color: 0xDC2626, geo: new THREE.ConeGeometry(0.5, 1.6, 10), rot: [0.4, 0, 0.8] },
+            { name: "Cardamom", color: 0x84CC16, geo: new THREE.SphereGeometry(0.7, 12, 12), scale: [0.7, 1.2, 0.7] },
+            { name: "Cinnamon", color: 0x78350F, geo: new THREE.CylinderGeometry(0.25, 0.25, 1.9, 8), rot: [0.7, 0.3, 0] },
+            { name: "Star Anise", color: 0xA16207, geo: new THREE.TorusGeometry(0.7, 0.28, 8, 8), rot: [1.2, 0.4, 0] },
+            { name: "Pepper", color: 0x1F2937, geo: new THREE.DodecahedronGeometry(0.55), rot: [0, 0.5, 0] },
+            { name: "Garlic", color: 0xF3F4F6, geo: new THREE.ConeGeometry(0.65, 1.3, 10), rot: [0.2, 0, 0.5] },
+            { name: "Herbs", color: 0x15803D, geo: new THREE.BoxGeometry(0.2, 1.4, 0.8), rot: [0.5, 0.5, 0.2] }
+        ];
+
+        const spiceMeshes = [];
+        const spiceCount = spicesData.length;
+
+        spicesData.forEach((spice, idx) => {
+            const mat = new THREE.MeshStandardMaterial({
+                color: spice.color,
+                roughness: 0.4,
+                metalness: 0.2,
+                emissive: 0x111111
+            });
+            const mesh = new THREE.Mesh(spice.geo, mat);
+            if (spice.scale) {
+                mesh.scale.set(spice.scale[0], spice.scale[1], spice.scale[2]);
+            }
+            if (spice.rot) {
+                mesh.rotation.set(spice.rot[0], spice.rot[1], spice.rot[2]);
+            }
+
+            // Small glowing aura around each spice satellite
+            const halo = new THREE.Mesh(
+                new THREE.SphereGeometry(0.9, 8, 8),
+                new THREE.MeshBasicMaterial({
+                    color: 0xFFDF73,
+                    transparent: true,
+                    opacity: 0.2,
+                    blending: THREE.AdditiveBlending
+                })
+            );
+            mesh.add(halo);
+
+            orbitMasterGroup.add(mesh);
+            spiceMeshes.push({
+                mesh: mesh,
+                baseAngle: (idx / spiceCount) * Math.PI * 2,
+                data: spice
+            });
+        });
+
+        // Scroll and Mouse Dynamics
+        let scrollVelocity = 0;
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', function() {
+            const currentScrollY = window.scrollY;
+            const delta = Math.abs(currentScrollY - lastScrollY);
+            scrollVelocity = Math.min(delta * 0.002, 0.05);
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+
+        // Interactive Mouse Drag / Tilt
+        let isOrbitVisible = true;
+        if ('IntersectionObserver' in window) {
+            const orbitObserver = new IntersectionObserver((entries) => {
+                isOrbitVisible = entries[0].isIntersecting;
+            }, { threshold: 0.05 });
+            orbitObserver.observe(container);
+        }
+
+        let orbitClock = new THREE.Clock();
+        let orbitRotation = 0;
+
+        function animateOrbit() {
+            requestAnimationFrame(animateOrbit);
+            if (!isOrbitVisible) return;
+
+            const delta = orbitClock.getDelta();
+            
+            // Base orbital speed + scroll acceleration with gentle decay
+            orbitRotation += (0.45 + scrollVelocity * 10) * delta;
+            scrollVelocity *= 0.94; // friction decay
+
+            // Gentle wobble on central 7
+            sevenGroup.rotation.y = Math.sin(orbitRotation * 0.6) * 0.25;
+            sevenGroup.rotation.x = Math.cos(orbitRotation * 0.4) * 0.08;
+
+            // Position each spice along the tilted elliptical orbit
+            spiceMeshes.forEach(item => {
+                const currentAngle = item.baseAngle + orbitRotation;
+                const x = Math.cos(currentAngle) * orbitRadiusX;
+                const z = Math.sin(currentAngle) * orbitRadiusZ;
+                
+                // Project onto tilted plane (rotation around X by 0.35 rad)
+                const tiltAngle = 0.35;
+                const y = -z * Math.sin(tiltAngle);
+                const finalZ = z * Math.cos(tiltAngle);
+
+                item.mesh.position.set(x, y, finalZ);
+                item.mesh.rotation.y += 0.02;
+                item.mesh.rotation.x += 0.015;
+            });
+
+            renderer.render(scene, camera);
+        }
+        animateOrbit();
+
+        // Resize Listener
+        window.addEventListener('resize', function() {
+            const newW = container.clientWidth;
+            const newH = container.clientHeight || 520;
+            camera.aspect = newW / newH;
+            camera.updateProjectionMatrix();
+            renderer.setSize(newW, newH);
+        });
+    }
+
+})();
+</script>
+<script>
+/**
+ * 7 SPICE BUFFET RESTAURANT - MASTER SCRIPT
+ * UI interactions, mobile drawer, spice journey menu switcher,
+ * gallery lightbox, reservation modal, and scroll animations.
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+
+    /* ==========================================================================
+       1. GLASSMORPHI HEADER ON SCROLL
+       ========================================================================== */
+    const siteHeader = document.getElementById('main-header');
+    function handleHeaderScroll() {
+        if (window.scrollY > 40) {
+            siteHeader.classList.add('scrolled');
+        } else {
+            siteHeader.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+
+    /* ==========================================================================
+       2. MOBILE DRAWER NAVIGATION
+       ========================================================================== */
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileDrawer = document.getElementById('mobileMenuDrawer');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const closeDrawerBtn = document.getElementById('closeMobileMenu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMobileMenu() {
+        mobileDrawer.classList.add('open');
+        drawerBackdrop.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileDrawer.classList.remove('open');
+        drawerBackdrop.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeMobileMenu);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeMobileMenu);
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    /* ==========================================================================
+       3. "THE 7 SPICE EXPERIENCE" INTERACTIVE MENU TABS
+       ========================================================================== */
+    const categoryBtns = document.querySelectorAll('.category-tab-btn');
+    const categoryPanels = document.querySelectorAll('.menu-category-panel');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetCategory = this.getAttribute('data-category');
+
+            // Update tab states
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Switch dish panels
+            categoryPanels.forEach(panel => {
+                if (panel.getAttribute('id') === `panel-${targetCategory}`) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    /* ==========================================================================
+       4. GALLERY FILTER & LIGHTBOX MODAL
+       ========================================================================== */
+    const galleryFilterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightboxModal = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
+    const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+
+    let currentGalleryIndex = 0;
+    const galleryData = [];
+
+    // Collect gallery images data
+    galleryItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        const titleEl = item.querySelector('.gallery-overlay h6');
+        const descEl = item.querySelector('.gallery-overlay span');
+
+        galleryData.push({
+            src: img ? img.getAttribute('src') : '',
+            title: titleEl ? titleEl.textContent : '7 Spice Signature Experience',
+            desc: descEl ? descEl.textContent : 'Luxury buffet presentation'
+        });
+
+        item.addEventListener('click', function() {
+            openLightbox(index);
+        });
+    });
+
+    // Filter functionality
+    galleryFilterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            galleryFilterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+            galleryItems.forEach(item => {
+                const colWrapper = item.closest('.gallery-col');
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    if (colWrapper) colWrapper.style.display = 'block';
+                } else {
+                    if (colWrapper) colWrapper.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    function openLightbox(index) {
+        if (!galleryData[index]) return;
+        currentGalleryIndex = index;
+        updateLightboxContent();
+        lightboxModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightboxModal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent() {
+        const data = galleryData[currentGalleryIndex];
+        if (!data) return;
+        lightboxImg.src = data.src;
+        lightboxTitle.textContent = data.title;
+        lightboxDesc.textContent = data.desc;
+    }
+
+    function prevLightboxImage() {
+        currentGalleryIndex = (currentGalleryIndex - 1 + galleryData.length) % galleryData.length;
+        updateLightboxContent();
+    }
+
+    function nextLightboxImage() {
+        currentGalleryIndex = (currentGalleryIndex + 1) % galleryData.length;
+        updateLightboxContent();
+    }
+
+    if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+    if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
+    if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', prevLightboxImage);
+    if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', nextLightboxImage);
+
+    // Keyboard support for Lightbox
+    window.addEventListener('keydown', function(e) {
+        if (!lightboxModal.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevLightboxImage();
+        if (e.key === 'ArrowRight') nextLightboxImage();
+    });
+
+    /* ==========================================================================
+       5. RESERVATION FORM DEMO & CONFIRMATION MODAL
+       ========================================================================== */
+    const reservationForm = document.getElementById('reservationForm');
+    const reservationModal = document.getElementById('reservationModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalDoneBtn = document.getElementById('modalDoneBtn');
+    const summaryDateTime = document.getElementById('summaryDateTime');
+    const summaryGuests = document.getElementById('summaryGuests');
+    const modalWhatsappDirect = document.getElementById('modalWhatsappDirect');
+
+    // Set minimum date to today
+    const dateInput = document.getElementById('resDate');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+    }
+
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Collect form data
+            const name = document.getElementById('resName').value.trim() || 'Valued Guest';
+            const date = document.getElementById('resDate').value;
+            const time = document.getElementById('resTime').value;
+            const guests = document.getElementById('resGuests').value;
+            const phone = document.getElementById('resPhone').value.trim();
+
+            if (!date || !time || !guests) {
+                alert('Please select date, time and number of guests.');
+                return;
+            }
+
+            // Populate Modal Summary
+            if (summaryDateTime) summaryDateTime.textContent = `${date} at ${time}`;
+            if (summaryGuests) summaryGuests.textContent = `${guests} Guests (Requested by: ${name})`;
+
+            // Construct personalized WhatsApp link
+            const whatsappMsg = encodeURIComponent(
+                `Hello 7 Spice Buffet Restaurant, I would like to confirm my table reservation:\n\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nGuests: ${guests}`
+            );
+            if (modalWhatsappDirect) {
+                modalWhatsappDirect.href = `https://wa.me/0123456789?text=${whatsappMsg}`;
+            }
+
+            // Show luxury modal
+            reservationModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            reservationForm.reset();
+            if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
+        });
+    }
+
+    function closeReservationModal() {
+        reservationModal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeReservationModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', closeReservationModal);
+    if (modalDoneBtn) modalDoneBtn.addEventListener('click', closeReservationModal);
+
+    /* ==========================================================================
+       6. INTERSECTION OBSERVER SCROLL ANIMATIONS
+       ========================================================================== */
+    const animatedElements = document.querySelectorAll('.fade-up-element');
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.12
+        };
+
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(el => scrollObserver.observe(el));
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        animatedElements.forEach(el => el.classList.add('in-view'));
+    }
+
+    /* ==========================================================================
+       7. ACTIVE NAV LINK TRACKING ON SCROLL
+       ========================================================================== */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link-luxury');
+
+    function highlightActiveNav() {
+        const scrollPosition = window.scrollY + 160;
+
+        sections.forEach(sec => {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            const id = sec.getAttribute('id');
+
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    window.addEventListener('scroll', highlightActiveNav, { passive: true });
+});
+</script>
+</body>
+</html>
